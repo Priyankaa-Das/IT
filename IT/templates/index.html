@@ -1,320 +1,13 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>ITHUB IT solution & Technology Services HTML-5 Template | Homepage 01</title>
-<!-- Stylesheets -->
-<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
-<link href="{% static 'css/style.css' %}" rel="stylesheet">
-<link href="{% static 'css/meanmenu.min.css' %}" rel="stylesheet">
-<link href="{% static 'css/responsive.css' %}" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+{% block seo %}
+    
+{% endblock seo %}
 
-<!-- Color Switcher Mockup -->
-<link href="{% static 'css/color-switcher-design.css' %}" rel="stylesheet">
 
-<link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
-<link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
-
-<!-- Responsive -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-
-<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.css' %}"></script><![endif]-->
-<!--[if lt IE 9]><script src="js/respond.css' %}"></script><![endif]-->
-</head>
-
-<body>
-
-<div class="page-wrapper">
-	
-	<!-- Cursor -->
-	<div class="cursor"></div>
-	<div class="cursor-follower"></div>
-	<!-- Cursor End -->
- 	
-	<!-- Preloader -->
-	<div class="preloader">
-		<div class="box"></div>
-	</div>
-	<!-- End Preloader -->
-	
-	<!-- Main Header -->
-	<header class="main-header header-style-one">
-		
-		<!-- Header Top -->
-		<div class="header-top">
-			<div class="auto-container">
-				<div class="inner-container">
-					<div class="d-flex justify-content-between align-items-center flex-wrap">
-						<div class="left-box d-flex align-items-center flex-wrap">
-							<div class="info-list_outer">
-								<!-- Info List -->
-								<ul class="header-top_list d-flex flex-wrap">
-									<li><span class="icon fa-classic fa-solid fa-envelope fa-fw"></span><a href="mailto:ithub@mail.com">ithub@mail.com</a></li>
-									<li><span class="icon fa-classic fa-solid fa-location-dot fa-fw"></span>24 Street, New York, USA</li>
-								</ul>
-							</div>
-						</div>
-						<div class="right-box d-flex align-items-center flex-wrap">
-							
-							<!-- Social Box -->
-							<div class="header-top_socials">
-								<div class="social-inner">
-									<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-									<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-									<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-									<a href="https://dribbble.com/"><i class="fa-brands fa-dribbble"></i></a>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<!-- Header Lower -->
-		<div class="header-lower">
-			<div class="auto-container">
-				<div class="inner-container">
-					<div class="d-flex justify-content-between align-items-center">
-						
-						<div class="logo-box">
-							<div class="logo"><a href="index.html"><img src="{% static 'images/logo.svg' %}" alt="" title="ITHUB"></a></div>
-						</div>
-						
-						<div class="nav-outer d-flex flex-wrap">
-							<!-- Main Menu -->
-							<nav class="main-menu navbar-expand-md">
-								<div class="navbar-header">
-									<!-- Toggle Button -->    	
-									<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-									</button>
-								</div>
-								
-								<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
-									<ul class="navigation clearfix">
-										<li class="dropdown has-mega-menu"><a href="#">Home</a>
-											<div class="mega-menu">
-												<div class="mega-menu-bar row clearfix">
-													<div class="column col-lg-3 col-md-12 col-sm-12">
-														<h6>Pages</h6>
-														<ul>
-															<li><a href="index.html">Homepage 01</a></li>
-															<li><a href="index-2.html">Homepage 02</a></li>
-															<li><a href="index-3.html">Homepage 03</a></li>
-														</ul>
-														<h6>One Pager</h6>
-														<ul>
-															<li><a href="index-1.html">Homepage 01</a></li>
-															<li><a href="index-2-1.html">Homepage 02</a></li>
-															<li><a href="index-3-1.html">Homepage 03</a></li>
-														</ul>
-													</div>
-													<div class="column col-lg-3 col-md-12 col-sm-12">
-														<h6>About us</h6>
-														<ul>
-															<li><a href="about.html">About us</a></li>
-															<li><a href="faq.html">Faq</a></li>
-															<li><a href="price.html">price</a></li>
-															<li><a href="team.html">Team</a></li>
-															<li><a href="team-detail.html">Team Detail</a></li>
-															<li><a href="testimonial.html">Testimonial</a></li>
-															<li><a href="privacy.html">Privacy Policy</a></li>
-															<li><a href="terms.html">Terms & Condition</a></li>
-														</ul>
-													</div>
-													<div class="column col-lg-3 col-md-12 col-sm-12">
-														<h6>Portfolio</h6>
-														<ul>
-															<li><a href="project.html">project</a></li>
-															<li><a href="project-detail.html">project detail</a></li>
-														</ul>
-														<h6>services</h6>
-														<ul>
-															<li><a href="services.html">services</a></li>
-															<li><a href="service-detail.html">services detail</a></li>
-														</ul>
-														<h6>Contact</h6>
-														<ul>
-															<li><a href="contact.html">Contact</a></li>
-															<li><a href="contact-2.html">Contact 02</a></li>
-														</ul>
-													</div>
-													<div class="column col-lg-3 col-md-12 col-sm-12">
-														<h6>Our Shop</h6>
-														<ul>
-															<li><a href="shop.html">shop</a></li>
-															<li><a href="shop-detail.html">shop detail</a></li>
-															<li><a href="cart.html">shoping Cart</a></li>
-															<li><a href="checkout.html">CheckOut</a></li>
-															<li><a href="register.html">Register</a></li>
-															<li><a href="coming-soon.html">coming soon</a></li>
-														</ul>
-														<h6>Blog</h6>
-														<ul>
-															<li><a href="blog.html">Blog 01</a></li>
-															<li><a href="blog-2.html">Blog 02</a></li>
-															<li><a href="blog-classic.html">Blog classic</a></li>
-															<li><a href="blog-detail.html">Blog Detail</a></li>
-															<li><a href="not-found.html">Not Found</a></li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li class="dropdown"><a href="#">About</a>
-											<ul>
-												<li><a href="about.html">About us</a></li>
-												<li><a href="faq.html">Faq</a></li>
-												<li><a href="price.html">price</a></li>
-												<li><a href="testimonial.html">Testimonial</a></li>
-												<li><a href="privacy.html">Privacy Policy</a></li>
-												<li><a href="terms.html">Terms & Condition</a></li>
-												<li class="dropdown"><a href="#">Team</a>
-													<ul>
-														<li><a href="team.html">Team</a></li>
-														<li><a href="team-detail.html">Team Detail</a></li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-										<li class="dropdown"><a href="#">Services</a>
-											<ul>
-												<li><a href="services.html">services</a></li>
-												<li><a href="service-detail.html">services detail</a></li>
-											</ul>
-										</li>
-										<li class="dropdown"><a href="#">project</a>
-											<ul>
-												<li><a href="project.html">project</a></li>
-												<li><a href="project-detail.html">project detail</a></li>
-											</ul>
-										</li>
-										<li class="dropdown"><a href="#">shop</a>
-											<ul>
-												<li><a href="shop.html">shop</a></li>
-												<li><a href="shop-detail.html">shop detail</a></li>
-												<li><a href="cart.html">shoping Cart</a></li>
-												<li><a href="checkout.html">CheckOut</a></li>
-												<li><a href="register.html">Register</a></li>
-												<li><a href="coming-soon.html">coming soon</a></li>
-											</ul>
-										</li>
-										<li class="dropdown"><a href="#">Blog</a>
-											<ul>
-												<li><a href="blog.html">Blog 01</a></li>
-												<li><a href="blog-2.html">Blog 02</a></li>
-												<li><a href="blog-classic.html">Blog classic</a></li>
-												<li><a href="blog-detail.html">Blog Detail</a></li>
-												<li><a href="not-found.html">Not Found</a></li>
-											</ul>
-										</li>
-										<li class="dropdown"><a href="#">Contact</a>
-											<ul>
-												<li><a href="contact.html">Contact</a></li>
-												<li><a href="contact-2.html">Contact 02</a></li>
-											</ul>
-										</li>
-									</ul>
-								</div>
-							</nav>
-						</div>
-
-						<!-- Main Menu End-->
-						<div class="outer-box d-flex align-items-center flex-wrap">
-
-							<!-- Search Btn -->
-							<div class="search-box-btn search-box-outer"><span class="icon fa fa-search"></span></div>
-
-							<!-- About Widget -->
-							<span class="about-widget">
-								<span class="hamburger">
-									<span class="top-bun"></span>
-									<span class="meat"></span>
-									<span class="bottom-bun"></span>
-								</span>
-							</span>
-							
-							<!-- Button Box -->
-							<div class="main-header_button">
-								<a href="about.html" class="theme-btn btn-style-one">
-									<span class="btn-wrap">
-										<span class="text-one">Get Started</span>
-										<span class="text-two">Get Started</span>
-									</span>
-								</a>
-							</div>
-							
-							<!-- Mobile Navigation Toggler -->
-							<div class="mobile-nav-toggler"><span class="icon fa-classic fa-solid fa-bars fa-fw"></span></div>
-
-						</div>
-						
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--End Header Lower-->
-		
-		<!-- Mobile Menu  -->
-		<div class="mobile-menu">
-			<div class="menu-backdrop"></div>
-			<div class="close-btn"><span class="icon fa-xmark"></span></div>
-			
-			<nav class="menu-box">
-				<div class="nav-logo"><a href="index.html"><img src="{% static 'images/mobile-logo.svg' %}" alt="" title=""></a></div>
-				<div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
-			</nav>
-		</div>
-		<!-- End Mobile Menu -->
-	
-	</header>
-	<!-- End Main Header -->
-	
-	<!-- About Sidebar -->
-	<div class="about-sidebar">
-		<div class="gradient-layer"></div>
-		<!-- Close Button -->
-		<div class="close-sidebar-widget close-button">
-			<span class="fa-solid fa-xmark fa-fw"></span>
-		</div>
-		<div class="sidebar-inner">
-			<div class="upper-box">
-				<div class="image">
-					<img src="{% static 'images/resource/about-1.jpg' %}" alt="" />
-				</div>
-				<div class="content-box">
-					<h3>About <span>ITHUB</span></h3>
-					<div class="text">Partnering with ITHUB-iT Consulting ensures peace of mind, knowing that your books are accurately updated in real time, and taxes are filed and paid on schedule.</div>
-					<ul class="about-sidebar_list">
-						<li>Discover the Project</li>
-						<li>Strategy Development</li>
-						<li>Implementation the solution</li>
-						<li>Monitoring Progress</li>
-					</ul>
-				</div>
-			</div>
-			<!-- Social Box -->
-			<div class="social-box">
-				<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-				<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-				<a href="https://youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-				<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-			</div>
-		</div>
-	</div>
-	<!-- End About Sidebar -->
-
-	<!-- Slider One -->
+{% block body %}
+    <!-- Slider One -->
 	<section class="slider-one">
 		<div class="main-slider swiper-container">
 			<div class="swiper-wrapper">
@@ -327,13 +20,13 @@
 						<!-- Content Column -->
 						<div class="slider-one_content">
 							<div class="slider-one_content-inner">
-								<div class="slider-one_title">unleash digital potential</div>
-								<h1 class="slider-one_heading">Delivering tech <span>solutions</span> for your startups</h1>
+								<div class="slider-one_title">Elevate your medical practice</div>
+								<h1 class="slider-one_heading">HIPAA-compliant <span>EMR</span> built for patient-first care</h1>
 								<div class="slider-one_button d-flex align-items-center flex-wrap">
-									<a href="about.html" class="theme-btn btn-style-two">
+									<a href="contact.html" class="theme-btn btn-style-two">
 										<span class="btn-wrap">
-											<span class="text-one">Work With Us</span>
-											<span class="text-two">Work With Us</span>
+											<span class="text-one">Book a Consultation</span>
+											<span class="text-two">Book a Consultation</span>
 										</span>
 									</a>
 									<div class="slider-one_video">
@@ -354,13 +47,13 @@
 						<!-- Content Column -->
 						<div class="slider-one_content">
 							<div class="slider-one_content-inner">
-								<div class="slider-one_title">unleash digital potential</div>
-								<h1 class="slider-one_heading">Delivering tech <span>solutions</span> for your startups</h1>
+								<div class="slider-one_title">Grow patient acquisition</div>
+								<h1 class="slider-one_heading">Data-driven <span>marketing</span> for healthcare practices</h1>
 								<div class="slider-one_button d-flex align-items-center flex-wrap">
-									<a href="about.html" class="theme-btn btn-style-two">
+									<a href="services.html" class="theme-btn btn-style-two">
 										<span class="btn-wrap">
-											<span class="text-one">Work With Us</span>
-											<span class="text-two">Work With Us</span>
+											<span class="text-one">See Our Services</span>
+											<span class="text-two">See Our Services</span>
 										</span>
 									</a>
 									<div class="slider-one_video">
@@ -381,13 +74,13 @@
 						<!-- Content Column -->
 						<div class="slider-one_content">
 							<div class="slider-one_content-inner">
-								<div class="slider-one_title">unleash digital potential</div>
-								<h1 class="slider-one_heading">Delivering tech <span>solutions</span> for your startups</h1>
+								<div class="slider-one_title">Protect your reputation</div>
+								<h1 class="slider-one_heading">Proactive <span>reputation</span> & reviews management</h1>
 								<div class="slider-one_button d-flex align-items-center flex-wrap">
-									<a href="about.html" class="theme-btn btn-style-two">
+									<a href="service-detail.html#reputation" class="theme-btn btn-style-two">
 										<span class="btn-wrap">
-											<span class="text-one">Work With Us</span>
-											<span class="text-two">Work With Us</span>
+											<span class="text-one">How We Help</span>
+											<span class="text-two">How We Help</span>
 										</span>
 									</a>
 									<div class="slider-one_video">
@@ -408,15 +101,15 @@
 		</div>
 		<!-- Slider One Socials -->
 		<div class="slider-one_socials">
-			<a href="#">facebook</a>
-			<a href="#">instagram</a>
-			<a href="#">twitter</a>
+			<a href="https://facebook.com/compassionatecareadvisors">facebook</a>
+			<a href="https://instagram.com/compassionatecareadvisors">instagram</a>
+			<a href="https://twitter.com/compcareadvisors">twitter</a>
 		</div>
 		
 		<!-- Slider One Options -->
 		<div class="slider-one_options">
 			<div class="button">
-				<a class="service-btn" href="service.html">More Services <i class="fa-arrow-right"></i></a>
+				<a class="service-btn" href="services.html">More Services <i class="fa-arrow-right"></i></a>
 			</div>
 			<div class="slider-one_authors">
 				<ul>
@@ -426,13 +119,14 @@
 					<li><img src="{% static 'images/main-slider/author-4.png' %}" alt="" /></li>
 				</ul>
 				<div class="slider-one_reviews">
-					25k+ <br> <span>Clients Review</span>
+					845+ <br> <span>Happy Clients</span>
 				</div>
 			</div>
 		</div>
 		<!-- End Slider One Options -->
 		
 	</section>
+
 	<!-- End Main Slider Section -->
 
 	<!-- Clients One -->
@@ -514,12 +208,14 @@
 									<span></span>
 								</div>
 							</div>
-							<h2 class="sec-title_heading">Exclusive Technology to Provide IT Solutions and Services</h2>
+							<h2 class="sec-title_heading">Purpose-built marketing & EMR solutions for modern healthcare</h2>
 						</div>
 						<div class="about-one_years">
 							<img src="{% static 'images/resource/years.png' %}" alt="" />
 						</div>
-						<div class="about-one_text">Partnering with <span>ITHUB-iT Consulting</span> ensures peace of mind, knowing that your books are accurately updated in real time, and taxes are filed and paid on schedule.</div>
+						<div class="about-one_text">
+							Partnering with <span>Compassionate Care Advisors (CCA)</span> gives your practice a growth engine that’s compliant, measurable, and patient-first. From HIPAA-ready EMR integration to SEO, reviews, and data-driven strategy, we help you attract, engage, and retain more patients—while your team stays focused on care.
+						</div>
 					</div>
 					<!-- Column -->
 					<div class="column col-lg-6 col-md-12 col-sm-12">
@@ -544,11 +240,11 @@
 													<img src="{% static 'images/icons/quote.svg' %}" alt="" />
 												</div>
 												<div class="review-block_one-text">
-													We love sharing my shortcuts and techniques with our consultancy teams, providing immense satisfaction.
+													CCA transformed our online presence and patient intake. Clear strategy, clean execution, measurable results.
 												</div>
 												<div class="review-block_one-info">
-													<i>4.5*</i>
-													<strong>Julian Bray <span>CEO, khurum@ithub</span></strong>
+													<i>4.9*</i>
+													<strong>Dr. Michael Brown <span>Practice Owner, Chicago</span></strong>
 												</div>
 											</div>
 										</div>
@@ -560,11 +256,11 @@
 													<img src="{% static 'images/icons/quote.svg' %}" alt="" />
 												</div>
 												<div class="review-block_one-text">
-													We love sharing my shortcuts and techniques with our consultancy teams, providing immense satisfaction.
+													Their HIPAA-compliant EMR rollout and marketing funnels boosted bookings without adding admin burden.
 												</div>
 												<div class="review-block_one-info">
-													<i>4.5*</i>
-													<strong>Julian Bray <span>CEO, khurum@ithub</span></strong>
+													<i>4.8*</i>
+													<strong>Dr. Sarah Miller <span>Clinic Director, San Francisco</span></strong>
 												</div>
 											</div>
 										</div>
@@ -576,11 +272,11 @@
 													<img src="{% static 'images/icons/quote.svg' %}" alt="" />
 												</div>
 												<div class="review-block_one-text">
-													We love sharing my shortcuts and techniques with our consultancy teams, providing immense satisfaction.
+													Smart SEO + reputation management = steady growth in qualified patients. CCA is a true partner.
 												</div>
 												<div class="review-block_one-info">
-													<i>4.5*</i>
-													<strong>Julian Bray <span>CEO, khurum@ithub</span></strong>
+													<i>5.0*</i>
+													<strong>Dr. Emily Johnson <span>Medical Director, New York</span></strong>
 												</div>
 											</div>
 										</div>
@@ -595,21 +291,23 @@
 			</div>
 		</div>
 	</section>
+
 	<!-- End About One -->
 	
 	<!-- Marketing One -->
 	<section class="marketing-one">
 		<div class="outer-container">
 			<div class="animation_mode">
-				<h1> marketing. &nbsp;</h1>
-				<h1> strategy. &nbsp;</h1>
-				<h1> marketing. &nbsp;</h1>
-				<h1> strategy. &nbsp;</h1>
-				<h1> marketing. &nbsp;</h1>
-				<h1> strategy. &nbsp;</h1>
+				<h1> healthcare marketing. &nbsp;</h1>
+				<h1> growth strategy. &nbsp;</h1>
+				<h1> patient acquisition. &nbsp;</h1>
+				<h1> reputation management. &nbsp;</h1>
+				<h1> digital presence. &nbsp;</h1>
+				<h1> data-driven results. &nbsp;</h1>
 			</div>
 		</div>
 	</section>
+
 	<!-- End Marketing One -->
 	
 	<!-- Achieve One -->
@@ -619,51 +317,58 @@
 		<div class="achieve-one_vector-two" style="background-image:url('{% static "images/background/vector-2.png" %}')"></div>
 		<div class="auto-container">
 			<div class="sec-title title-anim light">
-				<h2 class="sec-title_heading">We are Happy for Our <br> Achievement</h2>
+				<h2 class="sec-title_heading">Proudly Empowering <br> Healthcare Growth Nationwide</h2>
 			</div>
 			
 			<div class="achieve-one_counter">
 				<div class="row g-0 clearfix">
+
 					<!-- Counter One -->
 					<div class="counter-one_column col-lg-4 col-md-6 col-sm-12">
 						<div class="counter-one_inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-							<div class="counter-one_text">Satisfied Clients All <br> Over the World</div>
-							<div class="counter-one_count"><span class="odometer" data-count="8"></span>M</div>
+							<div class="counter-one_text">Practices We’ve Helped <br> Grow Nationwide</div>
+							<div class="counter-one_count"><span class="odometer" data-count="845"></span>+</div>
 						</div>
 					</div>
-					<!-- Counter One -->
+
+					<!-- Counter Two -->
 					<div class="counter-one_column col-lg-4 col-md-6 col-sm-12">
 						<div class="counter-one_inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-							<div class="counter-one_text">Clients Satisfactory <br> Reviews</div>
-							<div class="counter-one_count"><span class="odometer" data-count="316"></span></div>
+							<div class="counter-one_text">Average Return <br> on Marketing Investment</div>
+							<div class="counter-one_count"><span class="odometer" data-count="30"></span>%</div>
 						</div>
 					</div>
-					<!-- Counter One -->
+
+					<!-- Counter Three -->
 					<div class="counter-one_column col-lg-4 col-md-6 col-sm-12">
 						<div class="counter-one_inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-							<div class="counter-one_text">Success Rate</div>
+							<div class="counter-one_text">Client <br> Satisfaction Rate</div>
 							<div class="counter-one_count"><span class="odometer" data-count="97"></span>%</div>
 						</div>
 					</div>
-					<!-- Counter One -->
+
+					<!-- Counter Four -->
 					<div class="counter-one_column col-lg-4 col-md-6 col-sm-12">
 						<div class="counter-one_inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-							<div class="counter-one_text">Team Members</div>
-							<div class="counter-one_count"><span class="odometer" data-count="42"></span></div>
+							<div class="counter-one_text">Dedicated <br> Team Members</div>
+							<div class="counter-one_count"><span class="odometer" data-count="35"></span>+</div>
 						</div>
 					</div>
-					<!-- Counter One -->
+
+					<!-- Counter Five -->
 					<div class="counter-one_column col-lg-4 col-md-6 col-sm-12">
 						<div class="counter-one_inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-							<div class="counter-one_text">Satisfied Clients All Over <br> the World</div>
-							<div class="counter-one_count"><span class="odometer" data-count="4500"></span></div>
+							<div class="counter-one_text">Projects Completed <br> with Excellence</div>
+							<div class="counter-one_count"><span class="odometer" data-count="345"></span>+</div>
 						</div>
 					</div>
+
 				</div>
 			</div>
 			
 		</div>
 	</section>
+
 	<!-- End Achieve One -->
 	
 	<!-- Video One -->
@@ -687,75 +392,76 @@
 			<!-- Sec Title -->
 			<div class="sec-title">
 				<div class="sec-title_title">
-					work process
+					Work Process
 					<div class="sec-title_dots">
 						<span></span>
 						<span></span>
 						<span></span>
 					</div>
 				</div>
-				<h2 class="sec-title_heading">See the value in <br> our It consulting <br> solutions</h2>
+				<h2 class="sec-title_heading">How We Grow <br> Healthcare Practices</h2>
 			</div>
+
 			<div class="row clearfix">
-			
-				<!-- Step Block One -->
+				
+				<!-- Step 1 -->
 				<div class="step-block_one col-xl-3 col-lg-6 col-md-6 col-sm-12">
 					<div class="step-block_one-inner">
 						<div class="step-block_one-bg" style="background-image:url('{% static "images/background/pattern-5.png" %}')"></div>
 						<div class="step-block_one-number"><span>01</span>Step</div>
-						<h4 class="step-block_one-heading">Discover the Project</h4>
-						<div class="step-block_one-text">Our IT consultants collaborate with your team to fully understand your unique needs.</div>
+						<h4 class="step-block_one-heading">Discovery</h4>
+						<div class="step-block_one-text">We assess your practice goals, target audience, and current digital footprint.</div>
 					</div>
 				</div>
 				
-				<!-- Step Block One -->
+				<!-- Step 2 -->
 				<div class="step-block_one col-xl-3 col-lg-6 col-md-6 col-sm-12">
 					<div class="step-block_one-inner">
 						<div class="step-block_one-bg" style="background-image:url('{% static "images/background/pattern-5.png" %}')"></div>
 						<div class="step-block_one-number"><span>02</span>Step</div>
-						<h4 class="step-block_one-heading">Strategy Development</h4>
-						<div class="step-block_one-text">Our IT consultants collaborate with your team to fully understand your unique needs.</div>
+						<h4 class="step-block_one-heading">Strategy</h4>
+						<div class="step-block_one-text">We build a customized, HIPAA-compliant marketing and EMR plan.</div>
 					</div>
 				</div>
 				
-				<!-- Step Block One -->
+				<!-- Step 3 -->
 				<div class="step-block_one col-xl-3 col-lg-6 col-md-6 col-sm-12">
 					<div class="step-block_one-inner">
 						<div class="step-block_one-bg" style="background-image:url('{% static "images/background/pattern-5.png" %}')"></div>
 						<div class="step-block_one-number"><span>03</span>Step</div>
-						<h4 class="step-block_one-heading">Implementation the solution</h4>
-						<div class="step-block_one-text">Our IT consultants collaborate with your team to fully understand your unique needs.</div>
+						<h4 class="step-block_one-heading">Execution</h4>
+						<div class="step-block_one-text">We launch campaigns, optimize performance, and train your team.</div>
 					</div>
 				</div>
 				
-				<!-- Step Block One -->
+				<!-- Step 4 -->
 				<div class="step-block_one col-xl-3 col-lg-6 col-md-6 col-sm-12">
 					<div class="step-block_one-inner">
 						<div class="step-block_one-bg" style="background-image:url('{% static "images/background/pattern-5.png" %}')"></div>
 						<div class="step-block_one-number"><span>04</span>Step</div>
-						<h4 class="step-block_one-heading">Monitoring Progress</h4>
-						<div class="step-block_one-text">Our IT consultants collaborate with your team to fully understand your unique needs.</div>
+						<h4 class="step-block_one-heading">Optimization</h4>
+						<div class="step-block_one-text">We track metrics and refine your strategy for lasting growth.</div>
 					</div>
 				</div>
-				
+
 			</div>
-			
+
 			<!-- Process One Content -->
 			<div class="process-one_content">
-				<!-- Button Box -->
 				<div class="process-one_button">
-					<a href="about.html" class="theme-btn btn-style-three">
+					<a href="contact.html" class="theme-btn btn-style-three">
 						<span class="btn-wrap">
 							<span class="text-one">Get Started</span>
 							<span class="text-two">Get Started</span>
 						</span>
 					</a>
 				</div>
-				<div class="process-one_content-text">There are many variations of passages of lorem free market to <br> available, but the majority have alteration in some form, by injected <br> humour, or randomised words.</div>
+				<div class="process-one_content-text">A simple, proven process designed to help healthcare providers grow with confidence.</div>
 			</div>
-			
+
 		</div>
 	</section>
+
 	<!-- End Process One -->
 	
 	<!-- Program One -->
@@ -789,7 +495,7 @@
 						<!-- Award Box -->
 						<div class="step-award_box">
 							<div class="step-award_count"><span class="odometer" data-count="100"></span>+</div>
-							<span class="step-award_subtitle">Award Winning</span>
+							<span class="step-award_subtitle">Healthcare Brands Served</span>
 						</div>
 					</div>
 				</div>
@@ -800,16 +506,18 @@
 						<!-- Sec Title -->
 						<div class="sec-title title-anim">
 							<div class="sec-title_title">
-								what can we offer
+								What We Offer
 								<div class="sec-title_dots">
 									<span></span>
 									<span></span>
 									<span></span>
 								</div>
 							</div>
-							<h2 class="sec-title_heading">Services we're offering</h2>
+							<h2 class="sec-title_heading">Specialized Solutions for Medical Practices</h2>
 						</div>
+
 						<div class="offer-one_titles">
+
 							<!-- One -->
 							<div class="offer-one_title active">
 								<div class="offer-one_icon-outer">
@@ -818,17 +526,18 @@
 										<img src="{% static 'images/icons/offer-1.svg' %}" alt="" />
 									</div>
 								</div>
-								<h3 class="offer-one_heading"><a href="service-detail.html">Internet Marketing</a></h3>
+								<h3 class="offer-one_heading"><a href="service-detail.html#digital-presence">Digital Presence Enhancement</a></h3>
 								<ul class="offer-one_tags">
-									<li><a href="#">Strategy</a></li>
-									<li><a href="#">Marketing</a></li>
-									<li><a href="#">Advertisement</a></li>
-									<li><a href="#">Planing</a></li>
+									<li><a href="#">Website Design</a></li>
+									<li><a href="#">SEO</a></li>
+									<li><a href="#">Social Media</a></li>
+									<li><a href="#">Brand Identity</a></li>
 								</ul>
-								<a class="offer-one_arrow" href="service-detail.html">
+								<a class="offer-one_arrow" href="service-detail.html#digital-presence">
 									<img src="{% static 'images/icons/offer_arrow.svg' %}" alt="" />
 								</a>
 							</div>
+
 							<!-- Two -->
 							<div class="offer-one_title">
 								<div class="offer-one_icon-outer">
@@ -837,17 +546,18 @@
 										<img src="{% static 'images/icons/offer-2.svg' %}" alt="" />
 									</div>
 								</div>
-								<h3 class="offer-one_heading"><a href="service-detail.html">Google Ads Advertising</a></h3>
+								<h3 class="offer-one_heading"><a href="service-detail.html#reputation">Reputation Management</a></h3>
 								<ul class="offer-one_tags">
-									<li><a href="#">Strategy</a></li>
-									<li><a href="#">Marketing</a></li>
-									<li><a href="#">Advertisement</a></li>
-									<li><a href="#">Planing</a></li>
+									<li><a href="#">Review Monitoring</a></li>
+									<li><a href="#">Feedback Response</a></li>
+									<li><a href="#">Crisis Control</a></li>
+									<li><a href="#">Patient Trust</a></li>
 								</ul>
-								<a class="offer-one_arrow" href="service-detail.html">
+								<a class="offer-one_arrow" href="service-detail.html#reputation">
 									<img src="{% static 'images/icons/offer_arrow.svg' %}" alt="" />
 								</a>
 							</div>
+
 							<!-- Three -->
 							<div class="offer-one_title">
 								<div class="offer-one_icon-outer">
@@ -856,17 +566,18 @@
 										<img src="{% static 'images/icons/offer-3.svg' %}" alt="" />
 									</div>
 								</div>
-								<h3 class="offer-one_heading"><a href="service-detail.html">Social Media Marketing</a></h3>
+								<h3 class="offer-one_heading"><a href="service-detail.html#market-strategy">Market Analysis & Strategy</a></h3>
 								<ul class="offer-one_tags">
-									<li><a href="#">Strategy</a></li>
-									<li><a href="#">Marketing</a></li>
-									<li><a href="#">Advertisement</a></li>
-									<li><a href="#">Planing</a></li>
+									<li><a href="#">Data Insights</a></li>
+									<li><a href="#">Competitive Research</a></li>
+									<li><a href="#">Targeting</a></li>
+									<li><a href="#">Growth Plans</a></li>
 								</ul>
-								<a class="offer-one_arrow" href="service-detail.html">
+								<a class="offer-one_arrow" href="service-detail.html#market-strategy">
 									<img src="{% static 'images/icons/offer_arrow.svg' %}" alt="" />
 								</a>
 							</div>
+
 							<!-- Four -->
 							<div class="offer-one_title">
 								<div class="offer-one_icon-outer">
@@ -875,17 +586,18 @@
 										<img src="{% static 'images/icons/offer-4.svg' %}" alt="" />
 									</div>
 								</div>
-								<h3 class="offer-one_heading"><a href="service-detail.html">Search Engine Optimization</a></h3>
+								<h3 class="offer-one_heading"><a href="service-detail.html#emr">HIPAA-Compliant EMR Solutions</a></h3>
 								<ul class="offer-one_tags">
-									<li><a href="#">Strategy</a></li>
-									<li><a href="#">Marketing</a></li>
-									<li><a href="#">Advertisement</a></li>
-									<li><a href="#">Planing</a></li>
+									<li><a href="#">Workflow Optimization</a></li>
+									<li><a href="#">Secure Records</a></li>
+									<li><a href="#">Integration</a></li>
+									<li><a href="#">Automation</a></li>
 								</ul>
-								<a class="offer-one_arrow" href="service-detail.html">
+								<a class="offer-one_arrow" href="service-detail.html#emr">
 									<img src="{% static 'images/icons/offer_arrow.svg' %}" alt="" />
 								</a>
 							</div>
+
 						</div>
 					</div>
 				</div>
@@ -893,6 +605,7 @@
 			</div>
 		</div>
 	</section>
+
 	<!-- End Program One -->
 	
 	<!-- Testimonial One -->
@@ -912,8 +625,8 @@
 								<span></span>
 							</div>
 						</div>
-						<h2 class="sec-title_heading">We want the best work For Us!</h2>
-						<div class="sec-title_text">Collaborate Consulting exists to find the place where to <br> being seemingly disparate interests meet.</div>
+						<h2 class="sec-title_heading">Trusted by Leading <br> Medical Practices</h2>
+						<div class="sec-title_text">Real results from real providers—growth-focused marketing and HIPAA-ready systems that keep teams patient-first.</div>
 					</div>
 					<div class="testimonial-one_talk d-flex"><span class="up-down_animation">Lets Talk</span> <i><img src="{% static 'images/icons/hand-shake.png' %}" alt="" /></i></div>
 					<!-- Button Box -->
@@ -944,10 +657,10 @@
 												<div class="testimonial-block_one-author_image">
 													<img src="{% static 'images/resource/author-1.jpg' %}" alt="" />
 												</div>
-												Bradley Gordon
-												<span>CEO & Founder, Archin Studio</span>
+												Dr. Michael Brown
+												<span>Practice Owner, Chicago</span>
 											</div>
-											<div class="testimonial-block_one-text">“ A studio with passionate, professional and full creativity. Much more than i’m expect. Great services, high quality products & affordable prices. I’m extremly satisfied!. ”</div>
+											<div class="testimonial-block_one-text">“CCA transformed our online presence and new-patient flow. Clear strategy, flawless execution, measurable growth.”</div>
 											<div class="testimonial-block_one-rating">
 												5.0 &nbsp;
 												<span class="fa fa-star"></span>
@@ -969,12 +682,12 @@
 												<div class="testimonial-block_one-author_image">
 													<img src="{% static 'images/resource/author-1.jpg' %}" alt="" />
 												</div>
-												Bradley Gordon
-												<span>CEO & Founder, Archin Studio</span>
+												Dr. Sarah Miller
+												<span>Clinic Director, San Francisco</span>
 											</div>
-											<div class="testimonial-block_one-text">“ A studio with passionate, professional and full creativity. Much more than i’m expect. Great services, high quality products & affordable prices. I’m extremly satisfied!. ”</div>
+											<div class="testimonial-block_one-text">“Their HIPAA-compliant EMR rollout plus marketing funnels increased bookings without adding admin load.”</div>
 											<div class="testimonial-block_one-rating">
-												5.0 &nbsp;
+												4.9 &nbsp;
 												<span class="fa fa-star"></span>
 												<span class="fa fa-star"></span>
 												<span class="fa fa-star"></span>
@@ -994,10 +707,10 @@
 												<div class="testimonial-block_one-author_image">
 													<img src="{% static 'images/resource/author-1.jpg' %}" alt="" />
 												</div>
-												Bradley Gordon
-												<span>CEO & Founder, Archin Studio</span>
+												Dr. Emily Johnson
+												<span>Medical Director, New York</span>
 											</div>
-											<div class="testimonial-block_one-text">“ A studio with passionate, professional and full creativity. Much more than i’m expect. Great services, high quality products & affordable prices. I’m extremly satisfied!. ”</div>
+											<div class="testimonial-block_one-text">“Smart SEO and reviews management delivered steady, qualified patient growth. CCA is a true partner.”</div>
 											<div class="testimonial-block_one-rating">
 												5.0 &nbsp;
 												<span class="fa fa-star"></span>
@@ -1026,6 +739,7 @@
 			</div>
 		</div>
 	</section>
+
 	<!-- End Testimonial One -->
 	
 	<!-- Team One -->
@@ -1203,73 +917,76 @@
 	
 	<!-- Incredible One -->
 	<section class="incredible-one">
-		<div class="incredible-one_bg"></div>
-		<div class="incredible-one_pattern" style="background-image:url('{% static "images/background/pattern-9.png" %}')"></div>
-		<div class="incredible-one_vector" style="background-image:url('{% static "images/background/pattern-10.png" %}')"></div>
-		<div class="auto-container">
-			<!-- Sec Title -->
-			<div class="sec-title light title-anim">
-				<div class="sec-title_title">
-					Get to know 
-					<div class="sec-title_dots">
-						<span></span>
-						<span></span>
-						<span></span>
+			<div class="incredible-one_bg"></div>
+			<div class="incredible-one_pattern" style="background-image:url('{% static "images/background/pattern-9.png" %}')"></div>
+			<div class="incredible-one_vector" style="background-image:url('{% static "images/background/pattern-10.png" %}')"></div>
+			<div class="auto-container">
+				<!-- Sec Title -->
+				<div class="sec-title light title-anim">
+					<div class="sec-title_title">
+						Get to know 
+						<div class="sec-title_dots">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
 					</div>
+					<h2 class="sec-title_heading">the compassionate experts</h2>
 				</div>
-				<h2 class="sec-title_heading">incredible individuals</h2>
+				<div class="incredible-one_title">behind <br>Compassionate Care Advisors</div>
 			</div>
-			<div class="incredible-one_title">behind <br>company</div>
-		</div>
-	</section>
-	<!-- End Incredible One -->
-	
-	<!-- Experiance One -->
-	<section class="experiance-one">
-		<div class="marque-outer">
-			<!-- Animation Mode -->
-			<div class="animation_mode">
-				<h1> chatbot &nbsp;</h1>
-				<h1 class="light"> development &nbsp;</h1>
-				<h1> chatbot &nbsp;</h1>
-				<h1 class="light"> development &nbsp;</h1>
-			</div>
-			<!-- Animation Mode Two -->
-			<div class="animation_mode-two">
-				<h2>search engine marketing</h2>
-				<h2>search engine marketing</h2>
-				<h2>search engine marketing</h2>
-				<h2>search engine marketing</h2>
-				<h2>search engine marketing</h2>
-				<h2>search engine marketing</h2>
-				<h2>search engine marketing</h2>
-				<h2>search engine marketing</h2>
-				<h2>search engine marketing</h2>
-				<h2>search engine marketing</h2>
-			</div>
-		</div>
-		<div class="auto-container">
-			<div class="experiance-one_years d-flex justify-content-end">
-				<div class="experiance-one_years-inner">
-					<div class="experiance-one_text">with more than 40+ years of experience, our team has become a leader in this digital universe</div>
-					<!-- Button Box -->
-					<div class="experiance-one_button">
-						<a href="about.html" class="theme-btn btn-style-one">
-							<span class="btn-wrap">
-								<span class="text-one">Get Started</span>
-								<span class="text-two">Get Started</span>
-							</span>
-						</a>
-					</div>
+		</section>
+
+		<!-- End Incredible One -->
+		
+		<!-- Experiance One -->
+		<section class="experiance-one">
+			<div class="marque-outer">
+				<!-- Animation Mode -->
+				<div class="animation_mode">
+					<h1> healthcare &nbsp;</h1>
+					<h1 class="light"> marketing &nbsp;</h1>
+					<h1> practice &nbsp;</h1>
+					<h1 class="light"> growth &nbsp;</h1>
+				</div>
+				<!-- Animation Mode Two -->
+				<div class="animation_mode-two">
+					<h2>digital presence enhancement</h2>
+					<h2>reputation management</h2>
+					<h2>market analysis & strategy</h2>
+					<h2>HIPAA-compliant EMR</h2>
+					<h2>patient acquisition</h2>
+					<h2>healthcare branding</h2>
+					<h2>SEO for doctors</h2>
+					<h2>social media marketing</h2>
+					<h2>telehealth marketing</h2>
+					<h2>paid ads & analytics</h2>
 				</div>
 			</div>
-			
-		</div>
-	</section>
-	<!-- End Marketing One -->
-	
-	<!-- news One -->
-	<section class="news-one">
+			<div class="auto-container">
+				<div class="experiance-one_years d-flex justify-content-end">
+					<div class="experiance-one_years-inner">
+						<div class="experiance-one_text">
+							With decades of combined experience in healthcare and marketing, our team leads the way in driving measurable growth for medical practices.
+						</div>
+						<!-- Button Box -->
+						<div class="experiance-one_button">
+							<a href="contact.html" class="theme-btn btn-style-one">
+								<span class="btn-wrap">
+									<span class="text-one">Get Started</span>
+									<span class="text-two">Get Started</span>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- End Marketing One -->
+		
+		<!-- news One -->
+		<section class="news-one">
 		<div class="auto-container">
 			<!-- Sec Title -->
 			<div class="sec-title d-flex justify-content-between align-items-center flex-wrap">
@@ -1282,15 +999,15 @@
 							<span></span>
 						</div>
 					</div>
-					<h2 class="sec-title_heading">News & Articles</h2>
+					<h2 class="sec-title_heading">Insights & Guides for Healthcare Growth</h2>
 				</div>
 				<div class="right-box title-anim">
 					<!-- Button Box -->
 					<div class="news-one_button">
 						<a href="blog.html" class="theme-btn btn-style-three">
 							<span class="btn-wrap">
-								<span class="text-one">Get Started</span>
-								<span class="text-two">Get Started</span>
+								<span class="text-one">View All Posts</span>
+								<span class="text-two">View All Posts</span>
 							</span>
 						</a>
 					</div>
@@ -1319,7 +1036,7 @@
 							</a>
 						</div>
 						<div class="news-block_one-content">
-							<h3 class="news-block_one-title"><a href="blog-detail.html">How Managed IT Support a Flexible Workspace</a></h3>
+							<h3 class="news-block_one-title"><a href="blog-detail.html">HIPAA-Compliant EMR: What Practices Should Know in 2025</a></h3>
 						</div>
 					</div>
 				</div>
@@ -1345,7 +1062,7 @@
 							</a>
 						</div>
 						<div class="news-block_one-content">
-							<h3 class="news-block_one-title"><a href="blog-detail.html">Start writing Content that brings Success</a></h3>
+							<h3 class="news-block_one-title"><a href="blog-detail.html">Healthcare SEO: 7 Quick Wins to Increase Patient Bookings</a></h3>
 						</div>
 					</div>
 				</div>
@@ -1371,7 +1088,7 @@
 							</a>
 						</div>
 						<div class="news-block_one-content">
-							<h3 class="news-block_one-title"><a href="blog-detail.html">writing Content that bring Success Start</a></h3>
+							<h3 class="news-block_one-title"><a href="blog-detail.html">Reputation Playbook: Responding to Patient Reviews the Right Way</a></h3>
 						</div>
 					</div>
 				</div>
@@ -1379,236 +1096,11 @@
 			</div>
 		</div>
 	</section>
+
 	<!-- news One -->
-	
-	<!-- Main Footer -->
-	<footer class="main-footer">
-		<div class="main-footer_bg-color"></div>
-		<div class="main-footer_vector" style="background-image:url('{% static "images/icons/vector-3.png" %}')"></div>
-		<div class="auto-container">
-			<div class="inner-container">
-				<div class="footer-logo"><a href="index.html"><img src="{% static 'images/footer-logo.svg' %}" alt="" title=""></a></div>
-				<div class="d-flex justify-content-between align-items-center flex-wrap">
-					<div class="footer-text">We are prioritize collaboration <br> With our clients</div>
-					<!-- Social Box -->
-					<div class="footer-social_box">
-						<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-						<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-						<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-						<a href="https://dribbble.com/"><i class="fa-brands fa-dribbble"></i></a>
-					</div>
-				</div>
-				<div class="footer-discuss"><span class="up-down_animation">let’s discuss!</span></div>
-				<ul class="footer-contact_list d-flex justify-content-end">
-					<li><a href="mailto:info@ithub.com">info@ithub.com</a></li>
-					<li><a href="tel:+123-456-789-00">+(123) 456 789 00</a></li>
-				</ul>
-				<div class="footer-type_title variable-text"></div>
-			</div>
+{% endblock body %}
 
-		</div>
-		
-		<!-- Instagram Gallery -->
-		<div class="instagram-gallery">
-			<div class="outer-container">
-				
-				<div class="instagram-one_carousel swiper-container">
-					<div class="swiper-wrapper">
-						
-						<!-- Slide -->
-						<div class="swiper-slide">
-							<!-- Instagram Block One -->
-							<div class="instagram-block_one">
-								<div class="instagram-block_one-inner">
-									<div class="instagram-block_one-image">
-										<img src="{% static 'images/gallery/instagram-1.jpg' %}" alt="" />
-										<div class="instagram-block_one-overlay">
-											<a href="{% static 'images/gallery/instagram-1.jpg' %}" class="lightbox-image instagram-block_one-icon">
-												<i class=""><img src="{% static 'images/gallery/instagram.svg' %}" alt="" /></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
 
-						<!-- Slide -->
-						<div class="swiper-slide">
-							<!-- Instagram Block One -->
-							<div class="instagram-block_one">
-								<div class="instagram-block_one-inner">
-									<div class="instagram-block_one-image">
-										<img src="{% static 'images/gallery/instagram-2.jpg' %}" alt="" />
-										<div class="instagram-block_one-overlay">
-											<a href="{% static 'images/gallery/instagram-2.jpg' %}" class="lightbox-image instagram-block_one-icon">
-												<i class=""><img src="{% static 'images/gallery/instagram.svg' %}" alt="" /></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Slide -->
-						<div class="swiper-slide">
-							<!-- Instagram Block One -->
-							<div class="instagram-block_one">
-								<div class="instagram-block_one-inner">
-									<div class="instagram-block_one-image">
-										<img src="{% static 'images/gallery/instagram-3.jpg' %}" alt="" />
-										<div class="instagram-block_one-overlay">
-											<a href="{% static 'images/gallery/instagram-3.jpg' %}" class="lightbox-image instagram-block_one-icon">
-												<i class=""><img src="{% static 'images/gallery/instagram.svg' %}" alt="" /></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Slide -->
-						<div class="swiper-slide">
-							<!-- Instagram Block One -->
-							<div class="instagram-block_one">
-								<div class="instagram-block_one-inner">
-									<div class="instagram-block_one-image">
-										<img src="{% static 'images/gallery/instagram-4.jpg' %}" alt="" />
-										<div class="instagram-block_one-overlay">
-											<a href="{% static 'images/gallery/instagram-4.jpg' %}" class="lightbox-image instagram-block_one-icon">
-												<i class=""><img src="{% static 'images/gallery/instagram.svg' %}" alt="" /></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Slide -->
-						<div class="swiper-slide">
-							<!-- Instagram Block One -->
-							<div class="instagram-block_one">
-								<div class="instagram-block_one-inner">
-									<div class="instagram-block_one-image">
-										<img src="{% static 'images/gallery/instagram-5.jpg' %}" alt="" />
-										<div class="instagram-block_one-overlay">
-											<a href="{% static 'images/gallery/instagram-5.jpg' %}" class="lightbox-image instagram-block_one-icon">
-												<i class=""><img src="{% static 'images/gallery/instagram.svg' %}" alt="" /></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- End Instagram Gallery -->
-		
-		<div class="footer-bottom">
-			<div class="auto-container">
-				<!-- Copyright -->
-				<div class="main-footer_copyright">ITHUB &copy; 2025. All Rights Reserved.</div>
-			</div>
-		</div>
-	</footer>
-	<!-- End Main Footer -->
-	
-	<!-- Search Popup -->
-	<div class="search-popup">
-		<div class="color-layer"></div>
-		<button class="close-search"><span class="fa-xmark"></span></button>
-		<form method="post" action="blog.html">
-			<div class="form-group">
-				<input type="search" name="search-field" value="" placeholder="Search Here" required="">
-				<button class="fa fa-solid fa-magnifying-glass fa-fw" type="submit"></button>
-			</div>
-		</form>
-	</div>
-	<!-- End Search Popup -->
-	
-	<!-- Color Palate / Color Switcher -->
-	<div class="color-palate">
-		<div class="color-trigger">
-			<i class="fa fa-solid fa-gear fa-fw"></i>
-		</div>
-		<div class="color-palate-inner">
-			<div class="color-palate-head">
-				<h6>Choose Options</h6>
-			</div>
-			
-			<!-- Colors -->
-			<div class="various-color clearfix">
-				<div class="colors-list">
-					<span class="palate default-color active" data-theme-file="{% static 'css/color-themes/default-color.css' %}"></span>
-					<span class="palate blue-color" data-theme-file="{% static 'css/color-themes/blue-color.css' %}"></span>
-					<span class="palate olive-color" data-theme-file="{% static 'css/color-themes/olive-color.css' %}"></span>
-					<span class="palate orange-color" data-theme-file="{% static 'css/color-themes/orange-color.css' %}"></span>
-					<span class="palate purple-color" data-theme-file="{% static 'css/color-themes/purple-color.css' %}"></span>
-					<span class="palate green-color" data-theme-file="{% static 'css/color-themes/green-color.css' %}"></span>
-					<span class="palate brown-color" data-theme-file="{% static 'css/color-themes/brown-color.css' %}"></span>
-					<span class="palate yellow-color" data-theme-file="{% static 'css/color-themes/yellow-color.css' %}"></span>
-				</div>
-			</div>
-					
-			<h6>RTL Version</h6>
-			<ul class="rtl-version option-box"> <li class="rtl">RTL Version</li> <li>LTR Version</li> </ul>
-			<h6>Want Sticky Header</h6>
-			<ul class="header-version option-box"> <li class="box">No</li> <li>Yes</li></ul>
-			<h6>Dark Verion</h6>
-			<ul class="dark-version option-box"> <li class="box">Yes</li> <li>No</li></ul>
-			
-			<div class="purchase-box">
-				You will find much more options for colors and styling in admin panel. This color picker is used only for demonstation purposes.
-				<a href="#" class="theme-btn btn-style-one">
-					<span class="btn-wrap">
-						<span class="text-one">buy now</span>
-						<span class="text-two">buy now</span>
-					</span>
-				</a>
-			</div>
-			
-		</div>
-	</div>.css
-	<!-- End Color Palate / Color Switcher -->
-	
-</div>
-<!-- End PageWrapper -->
-
-<div class="progress-wrap">
-	<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-		<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
-	</svg>
-</div>
-
-<script src="{% static 'js/jquery.js' %}"></script>
-<script src="{% static 'js/popper.min.js' %}"></script>
-<script src="{% static 'js/bootstrap.min.js' %}"></script>
-<script src="{% static 'js/appear.js' %}"></script>
-<script src="{% static 'js/parallax.min.js' %}"></script>
-<script src="{% static 'js/tilt.jquery.min.js' %}"></script>
-<script src="{% static 'js/jquery.paroller.min.js' %}"></script>
-<script src="{% static 'js/wow.js' %}"></script>
-<script src="{% static 'js/swiper.min.js' %}"></script>
-<script src="{% static 'js/backtotop.js' %}"></script>
-<script src="{% static 'js/odometer.js' %}"></script>
-<script src="{% static 'js/parallax-scroll.js' %}"></script>
-
-<script src="{% static 'js/gsap.min.js' %}"></script>
-<script src="{% static 'js/SplitText.min.js' %}"></script>
-<script src="{% static 'js/ScrollTrigger.min.js' %}"></script>
-<script src="{% static 'js/ScrollToPlugin.min.js' %}"></script>
-<script src="{% static 'js/ScrollSmoother.min.js' %}"></script>
-
-<script src="{% static 'js/typeit.js' %}"></script>
-<script src="{% static 'js/jquery.marquee.min.js' %}"></script>
-<script src="{% static 'js/magnific-popup.min.js' %}"></script>
-<script src="{% static 'js/nav-tool.js' %}"></script>
-<script src="{% static 'js/jquery-ui.js' %}"></script>
-<script src="{% static 'js/element-in-view.js' %}"></script>
-<script src="{% static 'js/color-settings.js' %}"></script>
-<script src="{% static 'js/script.js' %}"></script>
-
-</body>
-</html>
+{% block js %}
+    
+{% endblock js %}
