@@ -1,0 +1,187 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block seo %}
+    
+{% endblock seo %}
+
+
+{% block body %}
+
+<!-- Page Title -->
+    <section class="page-title">
+		
+		<div class="page-title_bg-image" style="background-image:url(assets/images/background/3.jpg)"></div>
+		<div class="page-title_shape-one" style="background-image:url(assets/images/background/page-title-1.png)"></div>
+		<div class="page-title_shape-two" style="background-image:url(assets/images/background/page-title-2.png)"></div>
+        <div class="auto-container">
+			<h1>Blog Detail</h1>
+			<ul class="bread-crumb clearfix">
+				<li><a href="{% url 'index' %}">Home</a></li>
+				<li>{{ data.h1 }}</li>
+			</ul>
+        </div>
+    </section>
+<!-- Sidebar Page Container -->
+<div class="sidebar-page-container alternate">
+	<div class="auto-container">
+		<div class="row clearfix">
+			
+			<!-- Content Side -->
+			<div class="content-side col-lg-8 col-md-12 col-sm-12">
+				<div class="blog-detail">
+					<div class="news-detail_inner">
+						<div class="news-detail_content">
+							<!-- Post Date -->
+							<div class="blog-detail_date_outer">
+								<div class="blog-detail_date">{{ data.published|date:"d" }}/<span>{{ data.published|date:"m/Y" }}</span></div>
+							</div>
+							<div class="blog-detail_image">
+								{% if data.banner_image %}
+								<img src="{{ data.banner_image.url }}" alt="{{ data.h1 }}" />
+								<img src="{{ data.banner_image.url }}" alt="{{ data.h1 }}" />
+								{% elif data.image %}
+								<img src="{{ data.image.url }}" alt="{{ data.h1 }}" />
+								<img src="{{ data.image.url }}" alt="{{ data.h1 }}" />
+								{% else %}
+								<img src="assets/images/resource/news-9.jpg" alt="{{ data.h1 }}" />
+								<img src="assets/images/resource/news-9.jpg" alt="{{ data.h1 }}" />
+								{% endif %}
+							</div>
+							<div class="blog-detail_content">
+								<ul class="blog-detail_meta">
+									<li><span class="icon fa-regular fa-comments fa-fw"></span>03</li>
+									<li><span class="icon fa-solid fa-user fa-fw"></span>Admin</li>
+								</ul>
+								<h3 class="blog-detail_title">{{ data.h1 }}</h3>
+								<div class="blog-detail_text">{{ data.description }}</div>
+								
+								{{ data.content|safe }}
+								
+								<!-- Post Share Options-->
+								<div class="post-share-options">
+									<div class="post-tags"><strong>Tags:</strong>
+										{% for tag in data.tag.all %}
+										<a href="#">{{ tag.tags }}</a>
+										{% endfor %}
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="d-flex justify-content-between flex-wrap">
+							<strong class="social-links_title">Share this post with your friends</strong>
+							<div class="social-links">
+								<a href="#" class="fa-brands fa-facebook-f fa-fw"></a>
+								<a href="#" class="fa-brands fa-twitter fa-fw"></a>
+								<a href="#" class="fa-brands fa-google fa-fw"></a>
+								<a href="#" class="fa-brands fa-dribbble fa-fw"></a>
+							</div>
+						</div>
+						
+						<!-- Blog Author Post -->
+						
+						
+						<!-- More Posts -->
+						
+						
+						<!-- Comments Area -->
+						
+						<!-- Comment Form -->
+						
+					</div>
+					
+				</div>
+			</div>
+			
+			<!-- Sidebar Side -->
+			<div class="sidebar-side col-lg-4 col-md-12 col-sm-12">
+				<aside class="sidebar sticky-top">
+					
+					<!-- Sidebar Widget -->
+					<div class="sidebar-widget search-box">
+						<!-- Sidebar Title -->
+						<div class="sidebar-title">
+							<h4>Search</h4>
+						</div>
+						<div class="widget-content">
+							<form method="post" action="contact.html">
+								<div class="form-group">
+									<input type="search" name="search-field" value="" placeholder="Search Now" required>
+									<button type="submit"><span class="icon fa fa-search"></span></button>
+								</div>
+							</form>
+						</div>
+					</div>
+					
+					<!-- Post Widget -->
+					<div class="sidebar-widget post-widget">
+						<div class="widget-content">
+							<!-- Sidebar Title -->
+							<div class="sidebar-title">
+								<h4>Feature Posts</h4>
+							</div>
+							<div class="content">
+								{% for blog in data2|slice:":3" %}
+								<!-- Post -->
+								<div class="post">
+									<div class="thumb">
+										<a href="{% url 'blog_detail' blog.slug %}">
+											{% if blog.image %}
+											<img src="{{ blog.image.url }}" alt="{{ blog.h1 }}">
+											{% else %}
+											<img src="assets/images/resource/post-thumb-{{ forloop.counter }}.jpg" alt="{{ blog.h1 }}">
+											{% endif %}
+										</a>
+										<div class="post-date">{{ blog.published|date:"F j, Y" }}</div>
+									</div>
+									<h4><a href="{% url 'blog_detail' blog.slug %}">{{ blog.h1 }}</a></h4>
+								</div>
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+					
+					<!-- Category Widget -->
+					<div class="sidebar-widget category-widget">
+						<div class="widget-content">
+							<!-- Sidebar Title -->
+							<div class="sidebar-title">
+								<h4>Categories</h4>
+							</div>
+							<ul class="category-list_two">
+								{% for category in data.category.all %}
+								<li><a href="#">{{ category.category }}</a></li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
+					
+					<!-- Tags Widget -->
+					<div class="sidebar-widget popular-tags">
+						<div class="widget-content">
+							<!-- Sidebar Title -->
+							<div class="sidebar-title">
+								<h4>Popular Tags</h4>
+							</div>
+							<div class="content">
+								{% for tag in data.tag.all %}
+								<a href="#">{{ tag.tags }}</a>
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+					
+				</aside>
+			</div>
+			
+		</div>
+	</div>
+</div>
+    
+{% endblock body %}
+
+
+{% block js %}
+    
+{% endblock js %}
