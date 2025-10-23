@@ -1,0 +1,220 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block seo %}
+    
+{% endblock seo %}
+
+
+{% block body %}
+
+<!-- Page Title -->
+<section class="page-title">
+	
+	<div class="page-title_bg-image" style="background-image:url({% if service.banner_image %}{{ service.banner_image.url }}{% else %}assets/images/background/3.jpg{% endif %})"></div>
+	<div class="page-title_shape-one" style="background-image:url(assets/images/background/page-title-1.png)"></div>
+	<div class="page-title_shape-two" style="background-image:url(assets/images/background/page-title-2.png)"></div>
+	<div class="auto-container">
+		<h1>{{ service.title }}</h1>
+		<ul class="bread-crumb clearfix">
+			<li><a href="{% url 'index' %}">Home</a></li>
+			<li>{{ service.title }}</li>
+		</ul>
+	</div>
+</section>
+<!-- End Page Title -->
+
+<!-- Sidebar Page Container -->
+<div class="sidebar-page-container left-sidebar">
+	<div class="auto-container">
+		<div class="row clearfix">
+			
+			<!-- Sidebar Side -->
+			<div class="sidebar-side col-lg-4 col-md-12 col-sm-12">
+				<aside class="sidebar sticky-top">
+					
+					<!-- Category Widget -->
+					<div class="sidebar-widget category-widget">
+						<ul class="category-list">
+							{% for item in data2 %}
+							<li><a href="{% url 'service_detail' item.slug %}">
+								<span class="icon"><img src="assets/images/icons/service-{{ forloop.counter }}.svg" alt="" /></span>
+								{{ item.title }}</a>
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+					
+					<!-- Rating Widget -->
+					<div class="sidebar-widget rating-widget">
+						<div class="widget-content">
+							<div class="rating-widget_rating">4.9</div>
+							<div class="rating-widget_authors">
+								<ul>
+									<li><img src="assets/images/main-slider/author-1.png" alt="" /></li>
+									<li><img src="assets/images/main-slider/author-2.png" alt="" /></li>
+									<li><img src="assets/images/main-slider/author-3.png" alt="" /></li>
+									<li><img src="assets/images/main-slider/author-4.png" alt="" /></li>
+								</ul>
+								<div class="rating-widget_reviews">
+									Our Client <br> (5k + Reviews)
+								</div>
+							</div>
+							<h4 class="rating-widget_title">Customer experiences that speak for themselves</h4>
+							<!-- Button Box -->
+							<div class="rating-widget_title-button">
+								<a href="testimonial.html" class="theme-btn btn-style-one">
+									<span class="btn-wrap">
+										<span class="text-one">Book Now</span>
+										<span class="text-two">Book Now</span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					
+				</aside>
+			</div>
+			
+			<!-- Content Side -->
+			<div class="content-side col-lg-8 col-md-12 col-sm-12">
+				<!-- Service Detail -->
+				<div class="service-detail">
+					<div class="service-detail_inner">
+						<div class="service-detail_image">
+							{% if service.banner_image %}
+							<img src="{{ service.banner_image.url }}" alt="{{ service.title }}" />
+							{% else %}
+							<img src="assets/images/resource/services.jpg" alt="{{ service.title }}" />
+							{% endif %}
+							<div class="service-detail_tag">
+								<span>{{ service.title }}</span>
+							</div>
+						</div>
+						<h2 class="service-detail_title">{{ service.title }}</h2>
+						<div class="service-detail_text">{{ service.short_description|default:"Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis l consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna"|safe }}</div>
+						
+						{{ service.content|safe }}
+						
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<!-- End Sidebar Page Container -->
+
+<!-- Video One -->
+
+<!-- End Video One -->
+
+<!-- Process One -->
+<section class="process-one style-two">
+	<div class="auto-container">
+		<!-- Sec Title -->
+		<div class="sec-title">
+			<div class="sec-title_title">
+				Our Process
+				<div class="sec-title_dots">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			<h2 class="sec-title_heading">See the value in <br> our healthcare <br> consulting solutions</h2>
+		</div>
+		<div class="row clearfix">
+		
+			<!-- Step Block One -->
+			<div class="step-block_one col-lg-3 col-md-6 col-sm-12">
+				<div class="step-block_one-inner">
+					<div class="step-block_one-bg" style="background-image:url({% static 'images/background/pattern-5.png' %})"></div>
+					<div class="step-block_one-number"><span>01</span>Step</div>
+					<h4 class="step-block_one-heading">Patient & Project Discovery</h4>
+					<div class="step-block_one-text">We collaborate with your team to understand patient needs and healthcare goals thoroughly.</div>
+				</div>
+			</div>
+			
+			<!-- Step Block Two -->
+			<div class="step-block_one col-lg-3 col-md-6 col-sm-12">
+				<div class="step-block_one-inner">
+					<div class="step-block_one-bg" style="background-image:url({% static 'images/background/pattern-5.png' %})"></div>
+					<div class="step-block_one-number"><span>02</span>Step</div>
+					<h4 class="step-block_one-heading">Healthcare Strategy Development</h4>
+					<div class="step-block_one-text">We design strategic plans to enhance patient care, optimize processes, and improve outcomes.</div>
+				</div>
+			</div>
+			
+			<!-- Step Block Three -->
+			<div class="step-block_one col-lg-3 col-md-6 col-sm-12">
+				<div class="step-block_one-inner">
+					<div class="step-block_one-bg" style="background-image:url({% static 'images/background/pattern-5.png' %})"></div>
+					<div class="step-block_one-number"><span>03</span>Step</div>
+					<h4 class="step-block_one-heading">Solution Implementation</h4>
+					<div class="step-block_one-text">We execute healthcare solutions, digital tools, and processes tailored to your organization.</div>
+				</div>
+			</div>
+			
+			<!-- Step Block Four -->
+			<div class="step-block_one col-lg-3 col-md-6 col-sm-12">
+				<div class="step-block_one-inner">
+					<div class="step-block_one-bg" style="background-image:url({% static 'images/background/pattern-5.png' %})"></div>
+					<div class="step-block_one-number"><span>04</span>Step</div>
+					<h4 class="step-block_one-heading">Monitoring & Optimization</h4>
+					<div class="step-block_one-text">We continuously track progress, evaluate outcomes, and refine strategies for maximum impact.</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<!-- Process One Content -->
+		<div class="process-one_content">
+			<!-- Button Box -->
+			<div class="process-one_button">
+				<a href="about.html" class="theme-btn btn-style-three">
+					<span class="btn-wrap">
+						<span class="text-one">Get Started</span>
+						<span class="text-two">Get Started</span>
+					</span>
+				</a>
+			</div>
+			<div class="process-one_content-text">
+				We help healthcare providers streamline operations, improve patient care, <br>and deliver measurable results.
+			</div>
+		</div>
+		
+	</div>
+</section>
+
+<!-- End Process One -->
+
+<!-- CTA One -->
+<section class="cta-one">
+	<div class="auto-container">
+		<div class="inner-container d-flex justify-content-between align-items-center flex-wrap">
+			<div class="cta-one_content">
+				<div class="cta-one_title">Can You find Now</div>
+				<h3 class="cta-one_heading">Looking for the Best IT Business Solutions?</h3>
+			</div>
+			<div class="cta-one_btn">
+				<div class="news-three_button">
+					<a href="contact.html" class="theme-btn btn-style-one">
+						<span class="btn-wrap">
+							<span class="text-one">get a Quote</span>
+							<span class="text-two">get a Quote</span>
+						</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End CTA One -->
+    <br><br>
+{% endblock body %}
+
+
+{% block js %}
+    
+{% endblock js %}

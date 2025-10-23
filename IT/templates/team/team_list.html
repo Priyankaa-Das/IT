@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block seo %}
+    
+{% endblock seo %}
+
+
+{% block body %}
+
+<!-- Page Title -->
+    <section class="page-title">
+		<div class="page-title_big-title">Team</div>
+		<div class="page-title_bg-image" style="background-image:url(assets/images/background/3.jpg)"></div>
+		<div class="page-title_shape-one" style="background-image:url(assets/images/background/page-title-1.png)"></div>
+		<div class="page-title_shape-two" style="background-image:url(assets/images/background/page-title-2.png)"></div>
+        <div class="auto-container">
+			<h1>Team</h1>
+			<ul class="bread-crumb clearfix">
+				<li><a href="index.html">Home</a></li>
+				<li>Team</li>
+			</ul>
+        </div>
+    </section>
+    <!-- End Page Title -->
+	
+	<!-- Team One -->
+	<section class="team-one style-two">
+	<div class="team-one_layer" style="background-image:url(assets/images/background/pattern-8.png)"></div>
+	<div class="auto-container">
+	
+		<!-- Sec Title -->
+		<div class="sec-title centered">
+			<div class="sec-title_title">
+				<div class="sec-title_dots">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				Our Team
+				<div class="sec-title_dots">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			<h2 class="sec-title_heading">You will work with the <br> best people</h2>
+		</div>
+		
+		<div class="row g-0 clearfix">
+		
+			{% for member in teams %}
+			<!-- Team Block One -->
+			<div class="team-one_one">
+			  <div class="inner-box">
+				<div class="image-box">
+				  <figure class="image"><a href="{% url 'team_detail' member.slug %}">
+					{% if member.image %}
+					<img src="{{ member.image.url }}" alt="{{ member.name }}">
+					{% else %}
+					<img src="assets/images/resource/team-{{ forloop.counter }}.jpg" alt="{{ member.name }}">
+					{% endif %}
+				  </a></figure>
+				</div>
+				<div class="content-box">
+					<div class="d-flex justify-content-between">
+						<div class="left-box">
+							<span class="cat">{{ member.position }}</span>
+							<h5 class="title"><a href="{% url 'team_detail' member.slug %}">{{ member.name }}</a></h5>
+						</div>
+						<div class="right-box">
+							<div class="team-one_socials">
+								{% if member.facebook %}
+								<a href="{{ member.facebook }}"><i class="fa-brands fa-facebook-f"></i></a>
+								{% endif %}
+								{% if member.instagram %}
+								<a href="{{ member.instagram }}"><i class="fa-brands fa-instagram"></i></a>
+								{% endif %}
+								{% if member.twitter %}
+								<a href="{{ member.twitter }}"><i class="fa-brands fa-twitter"></i></a>
+								{% endif %}
+								{% if member.linkedin %}
+								<a href="{{ member.linkedin }}"><i class="fa-brands fa-dribbble"></i></a>
+								{% endif %}
+							</div>
+						</div>
+					</div>
+				</div>
+			  </div>
+			</div>
+			{% endfor %}
+			
+		</div>
+		
+		<div class="text-center">
+			<div class="team-one_info">
+				<div class="d-flex justify-content-center align-items-center">
+					<div class="team-one_info-text">A clear,concise headline that captures attention and communicates your value proposition </div>
+					<!-- Button Box -->
+					<div class="team-one_info-button">
+						<a href="contact.html" class="theme-btn btn-style-one">
+							<span class="btn-wrap">
+								<span class="text-one">Contact Now</span>
+								<span class="text-two">Contact Now</span>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</section>
+	<!-- End Team One -->
+    
+{% endblock body %}
+
+
+{% block js %}
+    
+{% endblock js %}

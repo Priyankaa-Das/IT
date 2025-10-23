@@ -1,0 +1,627 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block seo %}
+    
+{% endblock seo %}
+
+
+{% block body %}
+
+   <section class="page-title">
+		<div class="page-title_big-title">Services</div>
+		<div class="page-title_bg-image" style="background-image:url({% static 'images/background/3.jpg' %})"></div>
+		<div class="page-title_shape-one" style="background-image:url({% static 'images/background/page-title-1.png' %})"></div>
+		<div class="page-title_shape-two" style="background-image:url({% static 'images/background/page-title-2.png' %})"></div>
+        <div class="auto-container">
+			<h1>Services</h1>
+			<ul class="bread-crumb clearfix">
+				<li><a href="index.html">Home</a></li>
+				<li>Services</li>
+			</ul>
+        </div>
+    </section>
+    <!-- End Page Title -->
+	
+	<!-- Empower One -->
+	<!-- Empower One -->
+<section class="empower-one style-two">
+	<div class="empower-shape-image" style="background-image: url(assets/images/background/price-one_bg.png);"></div>
+	<div class="auto-container">
+		<!-- Sec Title -->
+		<div class="sec-title centered">
+			<div class="sec-title_title">
+				<div class="sec-title_dots">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				Empowering
+				<div class="sec-title_dots">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			<h2 class="sec-title_heading">Your Business Growth Through <br> with IT Solutions.</h2>
+		</div>
+		<div class="clearfix">
+			
+			{% for service in data %}
+			<!-- Empower Block One -->
+			<div class="empower-block_one">
+				<div class="empower-block_one-inner">
+					<div class="empower-block_one-image">
+						{% if service.banner_image %}
+						<img src="{{ service.banner_image.url }}" alt="{{ service.title }}" />
+						{% else %}
+						<img src="assets/images/resource/empower-{{ forloop.counter }}.jpg" alt="{{ service.title }}" />
+						{% endif %}
+						<div class="empower-block_one-icon">
+							<img src="assets/images/icons/service-{{ forloop.counter }}.svg" alt="" />
+						</div>
+						<div class="empower-block_bg" style="background-image:url(assets/images/background/empower-bg.png)"></div>
+					</div>
+					<div class="empower-block_one-content">
+						<h4 class="empower-block_one-title"><a href="{% url 'service_detail' service.slug %}">{{ service.title }}</a></h4>
+						<div class="empower-block_one-text">
+                            {{ service.short_description|default:"We are web designers, developers, project managers,"|slice:":156" }} ..
+                        </div>
+
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+			
+		</div>
+		
+		<div class="lower-box text-center">
+			<div class="empower-block_one-text">We are web designers, developers, project managers, And digital  marketing professionals <br> dedicated to Creative and solutions using the  latest trend.</div>
+			<!-- Button Box -->
+			<div class="empower-one_button">
+				<a href="services.html" class="theme-btn btn-style-one">
+					<span class="btn-wrap">
+						<span class="text-one">competitive</span>
+						<span class="text-two">competitive</span>
+					</span>
+				</a>
+			</div>
+		</div>
+		
+	</div>
+</section>
+<!-- End Empower One -->
+	<!-- End Empower One -->
+	
+	<!-- Business One -->
+<section class="business-one">
+	<div class="business-one_vector" style="background-image:url({% static 'images/background/pattern-21.png' %})"></div>
+	<div class="business-one_vector-two" style="background-image:url({% static 'images/background/pattern-22.png' %})"></div>
+	<div class="auto-container">
+		<div class="row clearfix">
+			
+			<!-- Video Column -->
+			<div class="business-one_video-column col-lg-6 col-md-12 col-sm-12">
+				<div class="business-one_video-outer">
+					<div class="business-one_video-bg"></div>
+					<a href="https://www.youtube.com/watch?v=kxPCFljwJws" class="business-one_play lightbox-video"><span><img src="{% static 'images/icons/play.png' %}" alt="" /><i class="ripple"></i></span></a>
+					<div class="business-one_video">
+						<img src="{% static 'images/resource/video.jpg' %}" alt="" />
+					</div>
+					<div class="business-one_video-content">
+						<div>
+							Patient Care Solutions
+							<span>Watch Video</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Content Column -->
+			<div class="business-one_content-column col-lg-6 col-md-12 col-sm-12">
+				<div class="business-one_content-outer">
+					<!-- Sec Title -->
+					<div class="sec-title light">
+						<div class="sec-title_title">
+							<div class="sec-title_dots">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+							Our Services
+							<div class="sec-title_dots">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+						<h2 class="sec-title_heading">Helping Healthcare Providers <br> Grow & Engage Patients</h2>
+						<div class="sec-title_text">We offer professional consulting, patient engagement strategies, and digital solutions to help healthcare organizations thrive.</div>
+					</div>
+					
+					<!-- Business One Content -->
+					<div class="business-one_content">
+						<div class="business-one_certified">
+							<img src="{% static 'images/icons/certified.png' %}" alt="" />
+						</div>
+						<ul class="business-one_list">
+							<li>Healthcare Process Optimization</li>
+							<li>Patient Engagement & Communication</li>
+							<li>Digital Health Solutions</li>
+							<li>Strategic Planning for Practices</li>
+						</ul>
+					</div>
+					<div class="news-one_button">
+						<a href="blog.html" class="theme-btn btn-style-three">
+							<span class="btn-wrap">
+								<span class="text-one">Get Started</span>
+								<span class="text-two">Get Started</span>
+							</span>
+						</a>
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</section>
+
+	<!-- End Business One -->
+	
+	<!-- Program One -->
+<section class="offer-one style-two">
+	<div class="offer-one_color"></div>
+	<div class="offer-one_bg-color" data-parallax='{"y" : 120}'></div>
+	<div class="auto-container">
+		<div class="row clearfix">
+			
+			<!-- Image Column -->
+			<div class="offer-one_image-column col-lg-6 col-md-12 col-sm-12">
+				<div class="offer-one_image-outer">
+					<div class="offer-one_images_outer">
+						<div class="offer-one_image active">
+							<img src="{% static 'images/resource/offer-1.jpg' %}" alt="" />
+						</div>
+						<div class="offer-one_image two">
+							<img src="{% static 'images/resource/offer-2.jpg' %}" alt="" />
+						</div>
+						<div class="offer-one_image three">
+							<img src="{% static 'images/resource/offer-3.jpg' %}" alt="" />
+						</div>
+						<div class="offer-one_image four">
+							<img src="{% static 'images/resource/offer-4.jpg' %}" alt="" />
+						</div>
+					</div>
+					<div class="step-award_box">
+						<div class="step-award_count"><span class="odometer" data-count="100"></span>+</div>
+						<span class="step-award_subtitle">Award Winning</span>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Content Column -->
+			<div class="offer-one_content-column col-lg-6 col-md-12 col-sm-12">
+				<div class="offer-one_content-outer">
+					<div class="sec-title title-anim">
+						<div class="sec-title_title">
+							Our Expertise
+							<div class="sec-title_dots">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+						<h2 class="sec-title_heading">Services We Provide</h2>
+					</div>
+					<div class="offer-one_titles">
+						
+						<!-- Service One -->
+						<div class="offer-one_title active">
+							<div class="offer-one_icon-outer">
+								<span class="offer-one_number">1</span>
+								<div class="offer-one_icon">
+									<img src="{% static 'images/icons/offer-1.svg' %}" alt="" />
+								</div>
+							</div>
+							<h3 class="offer-one_heading"><a href="service-detail.html">Digital Healthcare Consulting</a></h3>
+							<ul class="offer-one_tags">
+								<li><a href="#">Strategy</a></li>
+								<li><a href="#">Patient Care</a></li>
+								<li><a href="#">Process Optimization</a></li>
+								<li><a href="#">Healthcare Planning</a></li>
+							</ul>
+							<a class="offer-one_arrow" href="service-detail.html">
+								<img src="{% static 'images/icons/offer_arrow.svg' %}" alt="" />
+							</a>
+						</div>
+						
+						<!-- Service Two -->
+						<div class="offer-one_title">
+							<div class="offer-one_icon-outer">
+								<span class="offer-one_number">2</span>
+								<div class="offer-one_icon">
+									<img src="{% static 'images/icons/offer-2.svg' %}" alt="" />
+								</div>
+							</div>
+							<h3 class="offer-one_heading"><a href="service-detail.html">Healthcare Marketing & Outreach</a></h3>
+							<ul class="offer-one_tags">
+								<li><a href="#">Patient Engagement</a></li>
+								<li><a href="#">Advertising</a></li>
+								<li><a href="#">Brand Awareness</a></li>
+								<li><a href="#">Campaigns</a></li>
+							</ul>
+							<a class="offer-one_arrow" href="service-detail.html">
+								<img src="{% static 'images/icons/offer_arrow.svg' %}" alt="" />
+							</a>
+						</div>
+						
+						<!-- Service Three -->
+						<div class="offer-one_title">
+							<div class="offer-one_icon-outer">
+								<span class="offer-one_number">3</span>
+								<div class="offer-one_icon">
+									<img src="{% static 'images/icons/offer-3.svg' %}" alt="" />
+								</div>
+							</div>
+							<h3 class="offer-one_heading"><a href="service-detail.html">Telemedicine Solutions</a></h3>
+							<ul class="offer-one_tags">
+								<li><a href="#">Virtual Consult</a></li>
+								<li><a href="#">Patient Support</a></li>
+								<li><a href="#">Care Coordination</a></li>
+								<li><a href="#">Remote Monitoring</a></li>
+							</ul>
+							<a class="offer-one_arrow" href="service-detail.html">
+								<img src="{% static 'images/icons/offer_arrow.svg' %}" alt="" />
+							</a>
+						</div>
+						
+						<!-- Service Four -->
+						<div class="offer-one_title">
+							<div class="offer-one_icon-outer">
+								<span class="offer-one_number">4</span>
+								<div class="offer-one_icon">
+									<img src="{% static 'images/icons/offer-4.svg' %}" alt="" />
+								</div>
+							</div>
+							<h3 class="offer-one_heading"><a href="service-detail.html">SEO & Digital Presence</a></h3>
+							<ul class="offer-one_tags">
+								<li><a href="#">SEO</a></li>
+								<li><a href="#">Content Strategy</a></li>
+								<li><a href="#">Online Reputation</a></li>
+								<li><a href="#">Analytics</a></li>
+							</ul>
+							<a class="offer-one_arrow" href="service-detail.html">
+								<img src="{% static 'images/icons/offer_arrow.svg' %}" alt="" />
+							</a>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</section>
+
+	<!-- End Program One -->
+	
+	<!-- Team Two -->
+<section class="team-two style-two">
+	<div class="team-two_shadow" style="background-image:url({% static 'images/background/team-shadow.png' %})"></div>
+	<div class="auto-container">
+		<div class="inner-container">
+			<div class="team-two_title">Our Healthcare Expert Team</div>
+			<div class="team-two_border-layer"></div>
+			<div class="testimonial__slider-wrap">
+			
+				<div class="testimonial__active swiper-container">
+					<div class="swiper-wrapper">
+					
+						<!-- Slide -->
+						<div class="swiper-slide">
+							<!-- Team Block Two -->
+							<div class="team-block_two">
+								<div class="team-block_two-inner">
+									<div class="team-block_two-image">
+										<img src="{% static 'images/resource/team-6.jpg' %}" alt="" />
+									</div>
+									<div class="team-block_two-content">
+										<div class="team-block_two-designation">CEO & Founder</div>
+										<h3 class="team-block_two-title">Kathy Elizabet</h3>
+										<div class="team-block_two-text">Kathy leads our healthcare consulting team with a focus on patient care, operational efficiency, and strategic growth for healthcare organizations.</div>
+										<!-- Social Box -->
+										<div class="team-block_two-socials">
+											<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+											<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+											<a href="https://youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+											<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Slide -->
+						<div class="swiper-slide">
+							<!-- Team Block Two -->
+							<div class="team-block_two">
+								<div class="team-block_two-inner">
+									<div class="team-block_two-image">
+										<img src="{% static 'images/resource/team-6.jpg' %}" alt="" />
+									</div>
+									<div class="team-block_two-content">
+										<div class="team-block_two-designation">Medical Director</div>
+										<h3 class="team-block_two-title">Dr. Michael Stern</h3>
+										<div class="team-block_two-text">Dr. Stern specializes in patient safety and clinical process optimization, ensuring top-quality outcomes across all our healthcare projects.</div>
+										<div class="team-block_two-socials">
+											<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+											<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+											<a href="https://youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+											<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Slide -->
+						<div class="swiper-slide">
+							<!-- Team Block Two -->
+							<div class="team-block_two">
+								<div class="team-block_two-inner">
+									<div class="team-block_two-image">
+										<img src="{% static 'images/resource/team-6.jpg' %}" alt="" />
+									</div>
+									<div class="team-block_two-content">
+										<div class="team-block_two-designation">Operations Lead</div>
+										<h3 class="team-block_two-title">Sarah Collins</h3>
+										<div class="team-block_two-text">Sarah manages operational strategies for healthcare clients, focusing on efficiency, workflow improvements, and patient satisfaction.</div>
+										<div class="team-block_two-socials">
+											<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+											<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+											<a href="https://youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+											<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Slide -->
+						<div class="swiper-slide">
+							<!-- Team Block Two -->
+							<div class="team-block_two">
+								<div class="team-block_two-inner">
+									<div class="team-block_two-image">
+										<img src="{% static 'images/resource/team-6.jpg' %}" alt="" />
+									</div>
+									<div class="team-block_two-content">
+										<div class="team-block_two-designation">Patient Engagement Lead</div>
+										<h3 class="team-block_two-title">James Rivera</h3>
+										<div class="team-block_two-text">James ensures that patients receive personalized guidance and support, bridging the gap between healthcare providers and the community.</div>
+										<div class="team-block_two-socials">
+											<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+											<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+											<a href="https://youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+											<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					
+				</div>
+			
+			</div>
+
+			<!-- Thumbs Column -->
+			<div class="thumbs-column">
+				<div class="testimonial__nav swiper-container">
+					<div class="swiper-wrapper">
+						<div class="testimonial__nav-thumb swiper-slide">
+							<img src="{% static 'images/resource/team-7.jpg' %}" alt="">
+						</div>
+						<div class="testimonial__nav-thumb swiper-slide">
+							<img src="{% static 'images/resource/team-8.jpg' %}" alt="">
+						</div>
+						<div class="testimonial__nav-thumb swiper-slide">
+							<img src="{% static 'images/resource/team-9.jpg' %}" alt="">
+						</div>
+						<div class="testimonial__nav-thumb swiper-slide">
+							<img src="{% static 'images/resource/team-10.jpg' %}" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		
+		<div class="team-two_lower-box d-flex align-items-center flex-wrap">
+			<!-- Button Box -->
+			<div class="team-two_button">
+				<a href="team.html" class="theme-btn btn-style-one">
+					<span class="btn-wrap">
+						<span class="text-one">Book Now</span>
+						<span class="text-two">Book Now</span>
+					</span>
+				</a>
+			</div>
+			<a href="tel:+000-1234-56789" class="team-two_phone"><span><img src="{% static 'images/icons/phone-call.svg' %}" alt="" /></span> +000 1234 56789</a>
+		</div>
+	</div>
+</section>
+
+	<!-- End Team Two -->
+	
+	<!-- Incredible One -->
+	<section class="incredible-one">
+		<div class="incredible-one_bg"></div>
+		<div class="incredible-one_pattern" style="background-image:url({% static 'images/background/pattern-9.png' %})"></div>
+		<div class="incredible-one_vector" style="background-image:url({% static 'images/background/pattern-10.png' %})"></div>
+		<div class="auto-container">
+			<!-- Sec Title -->
+			<div class="sec-title light title-anim">
+				<div class="sec-title_title">
+					Get to know 
+					<div class="sec-title_dots">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<h2 class="sec-title_heading">incredible individuals</h2>
+			</div>
+			<div class="incredible-one_title">behind <br>company</div>
+		</div>
+	</section>
+	<!-- End Incredible One -->
+	
+	<!-- Experiance One -->
+	<section class="experiance-one">
+		<div class="marque-outer">
+			<!-- Animation Mode -->
+			<div class="animation_mode">
+				<h1>chatbot</h1>
+				<h1 class="light">development</h1>
+				<h1>chatbot</h1>
+				<h1 class="light">development</h1>
+			</div>
+			<!-- Animation Mode Two -->
+			<div class="animation_mode-two">
+				<h2>search engine marketing</h2>
+				<h2>search engine marketing</h2>
+				<h2>search engine marketing</h2>
+				<h2>search engine marketing</h2>
+				<h2>search engine marketing</h2>
+			</div>
+		</div>
+		<div class="auto-container">
+			<div class="experiance-one_years d-flex justify-content-end">
+				<div class="experiance-one_years-inner">
+					<div class="experiance-one_text">with more than 40+ years of experience, our team has become a leader in this digital universe</div>
+					<!-- Button Box -->
+					<div class="experiance-one_button">
+						<a href="about.html" class="theme-btn btn-style-one">
+							<span class="btn-wrap">
+								<span class="text-one">Get Started</span>
+								<span class="text-two">Get Started</span>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</section>
+	<!-- End Marketing One -->
+	
+	<!-- Clients One -->
+	<section class="clients-two style-two">
+		<div class="auto-container">
+			<!-- Sec Title -->
+			<div class="sec-title centered">
+				<div class="sec-title_title">
+					<div class="sec-title_dots">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					Used by 20M+ users around the world
+					<div class="sec-title_dots">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<h2 class="sec-title_heading">We’re happy to work with <br> largest brands</h2>
+			</div>
+			
+			<div class="inner-container clearfix">
+				
+				<!-- Column -->
+				<div class="column">
+					<div class="client-image">
+						<a href="#"><img src="{% static 'images/clients/7.png' %}" alt="" /></a>
+					</div>
+				</div>
+				
+				<!-- Column -->
+				<div class="column">
+					<div class="client-image">
+						<a href="#"><img src="{% static 'images/clients/8.png' %}" alt="" /></a>
+					</div>
+				</div>
+				
+				<!-- Column -->
+				<div class="column">
+					<div class="client-image">
+						<a href="#"><img src="{% static 'images/clients/9.png' %}" alt="" /></a>
+					</div>
+				</div>
+				
+				<!-- Column -->
+				<div class="column">
+					<div class="client-image">
+						<a href="#"><img src="{% static 'images/clients/10.png' %}" alt="" /></a>
+					</div>
+				</div>
+				
+				<!-- Column -->
+				<div class="column">
+					<div class="client-image">
+						<a href="#"><img src="{% static 'images/clients/11.png' %}" alt="" /></a>
+					</div>
+				</div>
+				
+				<!-- Column -->
+				<div class="column">
+					<div class="client-image">
+						<a href="#"><img src="{% static 'images/clients/12.png' %}" alt="" /></a>
+					</div>
+				</div>
+				
+				<!-- Column -->
+				<div class="column">
+					<div class="client-image">
+						<a href="#"><img src="{% static 'images/clients/13.png' %}" alt="" /></a>
+					</div>
+				</div>
+				
+				<!-- Column -->
+				<div class="column">
+					<div class="client-image">
+						<a href="#"><img src="{% static 'images/clients/14.png' %}" alt="" /></a>
+					</div>
+				</div>
+				
+				<!-- Column -->
+				<div class="column">
+					<div class="client-image">
+						<a href="#"><img src="{% static 'images/clients/15.png' %}" alt="" /></a>
+					</div>
+				</div>
+				
+				<!-- Column -->
+				<div class="column">
+					<div class="client-image">
+						<a href="#"><img src="{% static 'images/clients/16.png' %}" alt="" /></a>
+					</div>
+				</div>
+				
+			</div>
+
+		</div>
+	</section>
+	<!-- End Clients Two -->
+
+
+    
+{% endblock body %}
+
+
+{% block js %}
+    
+{% endblock js %}

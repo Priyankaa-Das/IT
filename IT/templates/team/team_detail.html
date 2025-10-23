@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block seo %}
+    
+{% endblock seo %}
+
+
+{% block body %}
+
+ <section class="page-title">
+		<div class="page-title_big-title">Team Detail</div>
+		<div class="page-title_bg-image" style="background-image:url(assets/images/background/3.jpg)"></div>
+		<div class="page-title_shape-one" style="background-image:url(assets/images/background/page-title-1.png)"></div>
+		<div class="page-title_shape-two" style="background-image:url(assets/images/background/page-title-2.png)"></div>
+        <div class="auto-container">
+			<h1>Team Detail</h1>
+			<ul class="bread-crumb clearfix">
+				<li><a href="index.html">Home</a></li>
+				<li>Team Detail</li>
+			</ul>
+        </div>
+    </section>
+
+
+    <!-- Team Detail -->
+<!-- Team Detail -->
+<section class="team-detail">
+	<div class="auto-container">
+		<div class="row clearfix">
+		
+			<!-- Image Column -->
+			<div class="team-detail_image-column col-lg-4 col-md-4 col-sm-12">
+				<div class="team-detail_image">
+					{% if member.image %}
+					<img src="{{ member.image.url }}" alt="{{ member.name }}" />
+					{% else %}
+					<img src="assets/images/resource/team-17.jpg" alt="{{ member.name }}" />
+					{% endif %}
+				</div>
+			</div>
+			
+			<!-- Content Column -->
+			<div class="team-detail_content-column col-lg-8 col-md-8 col-sm-12">
+				<div class="team-detail_content">
+					<div class="team-detail_designation">{{ member.position }}</div>
+					<h3 class="team-detail_title">{{ member.name }}</h3>
+					<div class="team-detail_text">{{ member.description|safe|truncatewords:50 }}</div>
+					<div class="team-detail_text">{{ member.description|safe|slice:"200:" }}</div>
+				</div>
+			</div>
+			
+		</div>
+		
+	
+		
+	</div>
+</section>
+<!-- End Team Detail -->
+
+<!-- CTA One -->
+<section class="cta-one style-two">
+	<div class="auto-container">
+		<div class="inner-container d-flex justify-content-between align-items-center flex-wrap">
+			<div class="cta-one_content">
+				<div class="cta-one_title">Can You find Now</div>
+				<h3 class="cta-one_heading">Looking for the Best IT Business Solutions?</h3>
+			</div>
+			<div class="cta-one_btn">
+				<div class="news-three_button">
+					<a href="contact.html" class="theme-btn btn-style-one">
+						<span class="btn-wrap">
+							<span class="text-one">get a Quote</span>
+							<span class="text-two">get a Quote</span>
+						</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End CTA One -->
+
+<br> <br>
+    
+{% endblock body %}
+
+
+{% block js %}
+    
+{% endblock js %}
