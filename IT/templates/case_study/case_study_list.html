@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block seo %}
+    
+{% endblock seo %}
+
+
+{% block body %}
+
+
+ <section class="page-title">
+		<div class="page-title_big-title">Projects</div>
+		<div class="page-title_bg-image" style="background-image:url(assets/images/background/3.jpg)"></div>
+		<div class="page-title_shape-one" style="background-image:url(assets/images/background/page-title-1.png)"></div>
+		<div class="page-title_shape-two" style="background-image:url(assets/images/background/page-title-2.png)"></div>
+        <div class="auto-container">
+			<h1>Our Projects</h1>
+			<ul class="bread-crumb clearfix">
+				<li><a href="index.html">Home</a></li>
+				<li>Projects</li>
+			</ul>
+        </div>
+ </section>
+
+
+    <!-- Gallery One -->
+<section class="gallery-one style-two">
+	<div class="gallery-one_shadow" style="background-image:url(assets/images/background/pattern-16.png)"></div>
+	<div class="auto-container">
+		<!-- Sec Title -->
+		<div class="sec-title centered">
+			<div class="sec-title_title">
+				<div class="sec-title_dots">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				our capabilities
+				<div class="sec-title_dots">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			<h2 class="sec-title_heading">We Believe in the Power of <br> Individual Contribution</h2>
+		</div>
+		<div class="inner-container">
+			{% for case in case_studies %}
+				<!-- Gallery Block One -->
+				<div class="gallery-block-one masonry-item col-lg-4 col-md-6 col-sm-12">
+					<div class="gallery-block-one_inner">
+						<div class="gallery-block_one-image">
+							{% if case.thumbnail_image %}
+							<img src="{{ case.thumbnail_image.url }}" alt="{{ case.h1 }}" />
+							{% elif case.banner_image %}
+							<img src="{{ case.banner_image.url }}" alt="{{ case.h1 }}" />
+							{% elif case.image %}
+							<img src="{{ case.image.url }}" alt="{{ case.h1 }}" />
+							{% else %}
+							<img src="assets/images/gallery/{{ forloop.counter }}.jpg" alt="{{ case.h1 }}" />
+							{% endif %}
+							<div class="gallery-block_one-overlay">
+								<div class="gallery-block_one-designation">
+									{% if case.client_industry %}
+									{{ case.client_industry }}
+									{% else %}
+									{% for cat in case.category.all|slice:":1" %}
+									{{ cat.category }}
+									{% endfor %}
+									{% endif %}
+								</div>
+								<h4 class="gallery-block-one_title"><a href="{% url 'case_study_detail' case.slug %}">{{ case.h1 }}</a></h4>
+							</div>
+						</div>
+						<a class="gallery-block_one-arrow" href="{% url 'case_study_detail' case.slug %}">
+							<img src="{% static 'images/icons/gallery-icon.svg' %}" alt="" />
+						</a>
+					</div>
+				</div>
+				{% endfor %}
+			<!-- Button Box -->
+			
+			
+		</div>
+	</div>
+</section>
+<!-- End Gallery One -->
+
+<!-- CTA One -->
+<section class="cta-one">
+	<div class="auto-container">
+		<div class="inner-container d-flex justify-content-between align-items-center flex-wrap">
+			<div class="cta-one_content">
+				<div class="cta-one_title">Can You find Now</div>
+				<h3 class="cta-one_heading">Looking for the Best IT Business Solutions?</h3>
+			</div>
+			<div class="cta-one_btn">
+				<div class="news-three_button">
+					<a href="contact.html" class="theme-btn btn-style-one">
+						<span class="btn-wrap">
+							<span class="text-one">get a Quote</span>
+							<span class="text-two">get a Quote</span>
+						</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End CTA One -->
+
+<br> <br>
+    
+{% endblock body %}
+
+
+{% block js %}
+    
+{% endblock js %}

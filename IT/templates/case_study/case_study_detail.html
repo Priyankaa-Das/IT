@@ -1,0 +1,219 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block seo %}
+    
+{% endblock seo %}
+
+
+{% block body %}
+
+<section class="page-title">
+		<div class="page-title_big-title">Detail</div>
+		<div class="page-title_bg-image" style="background-image:url(assets/images/background/3.jpg)"></div>
+		<div class="page-title_shape-one" style="background-image:url(assets/images/background/page-title-1.png)"></div>
+		<div class="page-title_shape-two" style="background-image:url(assets/images/background/page-title-2.png)"></div>
+        <div class="auto-container">
+			<h1>Project Detail</h1>
+			<ul class="bread-crumb clearfix">
+				<li><a href="index.html">Home</a></li>
+				<li>{{ case_study.h1 }}</li>
+			</ul>
+        </div>
+    </section>
+
+
+
+    <!-- Project Detail -->
+<section class="project-detail">
+	<div class="auto-container">
+		<!-- Sec Title -->
+		<div class="sec-title">
+			<div class="sec-title_title">
+				{{ case_study.client_name|default:"Tec vantage solutions" }}
+				<div class="sec-title_dots">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			<h2 class="sec-title_heading">{{ case_study.h1 }}</h2>
+			<div class="sec-title_text">{{ case_study.description }}</div>
+		</div>
+		<div class="inner-container">
+			<div class="project-detail_image">
+				{% if case_study.banner_image %}
+				<img src="{{ case_study.banner_image.url }}" alt="{{ case_study.h1 }}" />
+				{% elif case_study.image %}
+				<img src="{{ case_study.image.url }}" alt="{{ case_study.h1 }}" />
+				{% else %}
+				<img src="assets/images/resource/project-1.jpg" alt="{{ case_study.h1 }}" />
+				{% endif %}
+			</div>
+			<ul class="project-detail_info">
+				<li>Name:<span>{{ case_study.client_name|default:"Edward Emmen" }}</span></li>
+				<li>Categories:<span>{% for cat in case_study.category.all %}{{ cat.category }}{% if not forloop.last %}, {% endif %}{% endfor %}</span></li>
+				<li>Location:<span>California, USA</span></li>
+				<li>Status:<span>{{ case_study.metric_1_value|default:"100% Satisfied" }}</span></li>
+				<li>Duration:<span>{{ case_study.project_duration|default:"03 Months" }}</span></li>
+				<li>Date:<span>{{ case_study.project_date|date:"d M, Y"|default:"30 Oct, 2023" }}</span></li>
+			</ul>
+			
+			<!-- Sec Title -->
+			<div class="sec-title">
+				<div class="sec-title_title">
+					Working Process
+					<div class="sec-title_dots">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<h2 class="sec-title_heading">Challenge of this Case</h2>
+				<div class="sec-title_text">
+					{% if case_study.challenge %}
+					{{ case_study.challenge|safe }}
+					{% else %}
+					Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis l consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna Pellentesque commodo lacus at sodales sodales. Quisque sagitt condimentum. <br>
+					Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis l consectetur, ultrices mauris. Maecenas vitae mattis
+					{% endif %}
+				</div>
+			</div>
+			
+			{% if case_study.solution %}
+			<div class="project-detail_lists">
+				{{ case_study.solution|safe }}
+			</div>
+			{% else %}
+			<div class="project-detail_lists">
+				<div class="row clearfix">
+					<!-- Column -->
+					<div class="column col-lg-6 col-md-12 col-sm-12">
+						<ul class="project-detail_list">
+							<li>Sed tempor magna et risus ornare, a lobortis.</li>
+							<li>Vivamus tempus urna sit amet ante imperdiet.</li>
+						</ul>
+					</div>
+					<!-- Column -->
+					<div class="column col-lg-6 col-md-12 col-sm-12">
+						<ul class="project-detail_list">
+							<li>Mauris sit amet eros ac tellus egestas placerat.</li>
+							<li>Aliquam at leo pretium of consecteter.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			{% endif %}
+			
+			<div class="project-detail_gallery">
+				<div class="row clearfix">
+					<!-- Column -->
+					<div class="column col-lg-6 col-md-12 col-sm-12">
+						<div class="project-detail_image">
+							{% if case_study.gallery_image_1 %}
+							<img src="{{ case_study.gallery_image_1.url }}" alt="{{ case_study.h1 }}" />
+							{% else %}
+							<img src="assets/images/resource/project-2.jpg" alt="" />
+							{% endif %}
+						</div>
+					</div>
+					<!-- Column -->
+					<div class="column col-lg-6 col-md-12 col-sm-12">
+						<div class="project-detail_image">
+							{% if case_study.gallery_image_2 %}
+							<img src="{{ case_study.gallery_image_2.url }}" alt="{{ case_study.h1 }}" />
+							{% else %}
+							<img src="assets/images/resource/project-3.jpg" alt="" />
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Sec Title -->
+			<div class="sec-title no-marging">
+				<div class="sec-title_title">
+					Final Result
+					<div class="sec-title_dots">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<h2 class="sec-title_heading">Excellence in Our Service Final Results</h2>
+				<div class="sec-title_text">
+					{% if case_study.results %}
+					{{ case_study.results|safe }}
+					{% else %}
+					Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis l consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna Pellentesque commodo lacus at sodales sodales. Quisque sagitt condimentum. <br>
+					Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis l consectetur, ultrices mauris. Maecenas vitae mattis
+					{% endif %}
+				</div>
+			</div>
+			
+			{% if case_study.testimonial %}
+			<!-- Testimonial Section -->
+			<div class="sec-title">
+				<blockquote>
+					<div class="blockquote-inner">
+						<span class="quote"><img src="assets/images/icons/quote-1.svg" alt="" /></span>
+						"{{ case_study.testimonial }}"
+					</div>
+					<i>--- {{ case_study.testimonial_author }}{% if case_study.testimonial_position %}, {{ case_study.testimonial_position }}{% endif %}</i>
+				</blockquote>
+			</div>
+			{% endif %}
+			
+			{% if case_study.metric_1_label or case_study.metric_2_label or case_study.metric_3_label or case_study.metric_4_label %}
+			<!-- Metrics Section -->
+			<div class="project-detail_metrics">
+				<div class="row clearfix">
+					{% if case_study.metric_1_label %}
+					<div class="column col-lg-3 col-md-6 col-sm-12">
+						<div class="metric-box">
+							<h3>{{ case_study.metric_1_value }}</h3>
+							<p>{{ case_study.metric_1_label }}</p>
+						</div>
+					</div>
+					{% endif %}
+					{% if case_study.metric_2_label %}
+					<div class="column col-lg-3 col-md-6 col-sm-12">
+						<div class="metric-box">
+							<h3>{{ case_study.metric_2_value }}</h3>
+							<p>{{ case_study.metric_2_label }}</p>
+						</div>
+					</div>
+					{% endif %}
+					{% if case_study.metric_3_label %}
+					<div class="column col-lg-3 col-md-6 col-sm-12">
+						<div class="metric-box">
+							<h3>{{ case_study.metric_3_value }}</h3>
+							<p>{{ case_study.metric_3_label }}</p>
+						</div>
+					</div>
+					{% endif %}
+					{% if case_study.metric_4_label %}
+					<div class="column col-lg-3 col-md-6 col-sm-12">
+						<div class="metric-box">
+							<h3>{{ case_study.metric_4_value }}</h3>
+							<p>{{ case_study.metric_4_label }}</p>
+						</div>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+			{% endif %}
+			
+			{{ case_study.content|safe }}
+			
+		</div>
+	</div>
+</section>
+<!-- End Gallery One -->
+    
+{% endblock body %}
+
+
+{% block js %}
+    
+{% endblock js %}

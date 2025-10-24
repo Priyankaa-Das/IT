@@ -1,10 +1,11 @@
 from django.shortcuts import render, redirect
 from django.shortcuts import render, get_object_or_404
 from .models import Blog, Team
-from .models import Service
+from .models import Service , CaseStudy, CaseStudyCategory
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import ContactForm
+
 
 
 
@@ -87,3 +88,41 @@ def contact(request):
         form = ContactForm()
     
     return render(request, 'contact.html', {'form': form})
+
+
+
+
+
+def case_study_list(request):
+    case_studies = CaseStudy.objects.filter(status=True).order_by('-published')
+    categories = CaseStudyCategory.objects.all()
+    
+    # Filter by category if provided
+    category_slug = request.GET.get('category')
+    if category_slug:
+        category = get_object_or_404(CaseStudyCategory, slug=category_slug)
+        case_studies = case_studies.filter(category=category)
+    
+    context = {
+        'case_studies': case_studies,
+        'categories': categories,
+        'current_category': category_slug,
+    }
+    return render(request, 'case_study/case_study_list.html', context)
+
+
+def case_study_detail(request, slug):
+    case_study = get_object_or_404(CaseStudy, slug=slug, status=True)
+    related_studies = CaseStudy.objects.filter(
+        status=True
+    ).exclude(id=case_study.id).order_by('-published')[:3]
+    
+    context = {
+        'case_study': case_study,
+        'related_studies': related_studies,
+    }
+    return render(request, 'case_study/case_study_detail.html', context)
+
+
+def faq(request):
+	return render(request, 'faqs.html')
