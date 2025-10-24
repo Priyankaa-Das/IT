@@ -3,7 +3,19 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>ITHUB IT solution & Technology Services HTML-5 Template | Homepage 01</title>
+{% block seo %}
+    
+{% endblock seo %}
+
+<title>Compassionate Care Advisors | Expert Healthcare Marketing & HIPAA-Compliant Solutions</title>
+<meta name="description" content="Compassionate Care Advisors helps healthcare providers grow through data-driven marketing, reputation management, and HIPAA-compliant EMR solutions. Elevate your practice with expert strategy and innovation." />
+<meta name="keywords" content="healthcare marketing, HIPAA EMR, medical marketing agency, reputation management, patient acquisition, digital presence, Compassionate Care Advisors, CCA" />
+<meta property="og:title" content="Compassionate Care Advisors | Transforming Healthcare Marketing" />
+<meta property="og:description" content="Data-driven healthcare marketing and EMR solutions to grow your medical practice with trust, compliance, and measurable results." />
+<meta property="og:image" content="{% static 'images/social/cca-og.jpg' %}" />
+<meta property="og:url" content="https://www.compassionatecareadvisors.com/" />
+
+
 <!-- Stylesheets -->
 <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
 <link href="{% static 'css/style.css' %}" rel="stylesheet">
@@ -36,9 +48,9 @@
 	<!-- Cursor End -->
  	
 	<!-- Preloader -->
-	<div class="preloader">
+	<!-- <div class="preloader">
 		<div class="box"></div>
-	</div>
+	</div> -->
 	<!-- End Preloader -->
 	
 	<!-- Main Header -->
@@ -92,7 +104,7 @@
 					<div class="d-flex justify-content-between align-items-center">
 						
                             <div class="logo-box">
-                                <div class="logo"><a href="index.html"><img src="{% static 'images/logo.svg' %}" alt="" title="ITHUB"></a></div>
+                                <div class="logo"><a href="index.html"><img src="{% static 'logo.png' %}" style="width: 160px;"  alt="" title="ITHUB"></a></div>
                             </div>
                             
                             <div class="nav-outer d-flex flex-wrap">
@@ -274,36 +286,48 @@
 	
 	<!-- About Sidebar -->
 	<div class="about-sidebar">
-		<div class="gradient-layer"></div>
-		<!-- Close Button -->
-		<div class="close-sidebar-widget close-button">
-			<span class="fa-solid fa-xmark fa-fw"></span>
-		</div>
-		<div class="sidebar-inner">
-			<div class="upper-box">
-				<div class="image">
-					<img src="{% static 'images/resource/about-1.jpg' %}" alt="" />
-				</div>
-				<div class="content-box">
-					<h3>About <span>ITHUB</span></h3>
-					<div class="text">Partnering with ITHUB-iT Consulting ensures peace of mind, knowing that your books are accurately updated in real time, and taxes are filed and paid on schedule.</div>
-					<ul class="about-sidebar_list">
-						<li>Discover the Project</li>
-						<li>Strategy Development</li>
-						<li>Implementation the solution</li>
-						<li>Monitoring Progress</li>
-					</ul>
-				</div>
-			</div>
-			<!-- Social Box -->
-			<div class="social-box">
-				<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-				<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-				<a href="https://youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-				<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-			</div>
-		</div>
-	</div>
+	<div class="gradient-layer"></div>
+	<!-- Close Button -->
+        <div class="close-sidebar-widget close-button">
+            <span class="fa-solid fa-xmark fa-fw"></span>
+        </div>
+        <div class="sidebar-inner">
+            <div class="upper-box">
+                <div class="image">
+                    <img src="{% static 'images/resource/about-1.jpg' %}" alt="" />
+                </div>
+                <div class="content-box">
+                    <h3>About <span>Compassionate Care Advisors</span></h3>
+                    <div class="text">
+                        We help healthcare providers grow with data-driven marketing, digital visibility, and HIPAA-compliant systems — so you can focus on what matters most: patient care.
+                    </div>
+                    <ul class="about-sidebar_list">
+                        <li>Attract more qualified patients</li>
+                        <li>Build a trusted online reputation</li>
+                        <li>Streamline workflows with HIPAA-ready EMR</li>
+                        <li>Accelerate your practice growth</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CTA Box -->
+            <div class="cta-box" style=" text-align: center;">
+                <h4 style="font-weight:700; color:#fff;">Ready to Transform Your Practice?</h4>
+                <p style=" font-size:15px; margin-bottom:15px;">
+                    Schedule a free strategy call with our healthcare marketing experts and discover your next growth opportunity.
+                </p>
+                <a href="contact.html" class="theme-btn btn-style-one" style="display:inline-block;">
+                    <span class="btn-wrap">
+                        <span class="text-one">Book Your Free Consultation</span>
+                        <span class="text-two">Book Now</span>
+                    </span>
+                </a>
+            </div>
+
+           
+        </div>
+    </div>
+
 	<!-- End About Sidebar -->
 
     
@@ -318,7 +342,7 @@
 		<div class="auto-container">
         <div class="inner-container">
             <div class="footer-logo">
-                <a href="index.html"><img src="{% static 'images/footer-logo.svg' %}" alt="" title="Compassionate Care Advisors"></a>
+                <a href="index.html"><img src="{% static 'logo.png' %}" style="width: 200px;" alt="" title="Compassionate Care Advisors"></a>
             </div>
 
             <div class="d-flex justify-content-between align-items-center flex-wrap">

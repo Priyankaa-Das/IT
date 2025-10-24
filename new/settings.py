@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-6+*seicynbp))_u%sq76-fjy(i)w5v+@vp+&z1!6v%)6$lv@i&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -197,5 +197,7 @@ CKEDITOR_CONFIGS = {
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
+CSRF_TRUSTED_ORIGINS = ['https://0a254bfd165e.ngrok-free.app', 'http://0a254bfd165e.ngrok-free.app']
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
