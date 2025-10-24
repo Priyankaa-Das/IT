@@ -1,10 +1,13 @@
 from django.shortcuts import render, redirect
 from django.shortcuts import render, get_object_or_404
 from .models import Blog, Team
-from .models import Service , CaseStudy, CaseStudyCategory
+from .models import Service , CaseStudy, CaseStudyCategory , ContactMessage
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import ContactForm
+
+
+
 
 
 
@@ -129,3 +132,41 @@ def faq(request):
 
 def testimonials(request):
 	return render(request, 'testimonials.html')
+
+
+
+
+
+def contact_view(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # Save the contact message
+            contact_message = form.save()
+            
+            # Show success message
+            messages.success(request, 'Thank you for contacting us! We will get back to you soon.')
+            
+            # Optional: Send email notification
+            # send_mail(
+            #     f'New Contact Message from {contact_message.name}',
+            #     contact_message.message,
+            #     contact_message.email,
+            #     ['your-email@example.com'],
+            #     fail_silently=False,
+            # )
+            
+            # Redirect to avoid form resubmission
+            return redirect('contact_success')
+        else:
+            messages.error(request, 'Please correct the errors below.')
+    else:
+        form = ContactForm()
+    
+    context = {
+        'form': form,
+    }
+    return render(request, 'contact/contact.html', context)
+
+def contact_success_view(request):
+    return render(request, 'contact/contact_success.html')
