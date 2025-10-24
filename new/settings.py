@@ -198,5 +198,7 @@ CKEDITOR_CONFIGS = {
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
+CSRF_TRUSTED_ORIGINS = ['https://0a254bfd165e.ngrok-free.app', 'http://0a254bfd165e.ngrok-free.app']
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
