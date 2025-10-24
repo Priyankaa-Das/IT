@@ -20,4 +20,6 @@ urlpatterns = [
 
     path('faq/', views.faq, name='faq'),
 
+    path('testimonials/', views.testimonials, name='testimonials'),
+
     ]

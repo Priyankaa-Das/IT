@@ -1,0 +1,223 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block seo %}
+    
+{% endblock seo %}
+
+
+{% block body %}
+
+    <section class="page-title">
+		<div class="page-title_big-title">Testimonial</div>
+		<div class="page-title_bg-image" style="background-image:url({% static 'images/background/3.jpg' %})"></div>
+		<div class="page-title_shape-one" style="background-image:url({% static 'images/background/page-title-1.png' %})"></div>
+		<div class="page-title_shape-two" style="background-image:url({% static 'images/background/page-title-2.png' %})"></div>
+        <div class="auto-container">
+			<h1>Testimonial</h1>
+			<ul class="bread-crumb clearfix">
+				<li><a href="{% url 'index' %}">Home</a></li>
+				<li>Testimonial</li>
+			</ul>
+        </div>
+    </section>
+
+
+    <!-- Testimonial Two -->
+<section class="testimonial-two">
+	<div class="testimonial-two_shadow" style="background-image:url({% static 'images/background/pattern-25.png' %})"></div>
+	<div class="auto-container">
+		<!-- Sec Title -->
+		<div class="sec-title">
+			<div class="d-flex justify-content-between align-items-center flex-wrap">
+				<div class="left-box">
+					<div class="sec-title_title">
+						CLIENT TESTIMONIALS
+						<div class="sec-title_dots">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+					<h2 class="sec-title_heading">Trusted by Healthcare Leaders, <br> Backed by Proven Results</h2>
+				</div>
+				<div class="right-box">
+					<div class="testimonial-two_arrows" style="background-image:url({% static 'images/background/pattern-20.png' %})"></div>
+					<div class="d-flex justify-content-between align-items-center flex-wrap">
+						<div class="testimonial-one_talk d-flex align-items-center"><span class="up-down_animation">Let’s Talk</span> <i><img src="{% static 'images/icons/hand-shake.png' %}" alt="" /></i></div>
+						<!-- Button Box -->
+						<div class="testimonial-two_button d-flex justify-content-end">
+							<a href="contact.html" class="theme-btn btn-style-three">
+								<span class="btn-wrap">
+									<span class="text-one">Contact Us</span>
+									<span class="text-two">Contact Us</span>
+								</span>
+							</a>
+						</div>
+					</div>
+					<div class="sec-title_text">Our clients trust us to deliver secure, efficient, and patient-focused digital healthcare solutions that make a lasting impact on their practices and communities.</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row clearfix">
+			
+			<!-- Testimonial Two Rating Column -->
+			<div class="testimonial-two_rating-column col-lg-4 col-md-4 col-sm-12">
+				<div class="testimonial-two_rating-outer">
+					<div class="testimonial-two_rating">4.9</div>
+					<div class="testimonial-two_authors">
+						<ul>
+							<li><img src="{% static 'images/main-slider/author-1.png' %}" alt="" /></li>
+							<li><img src="{% static 'images/main-slider/author-2.png' %}" alt="" /></li>
+							<li><img src="{% static 'images/main-slider/author-3.png' %}" alt="" /></li>
+							<li><img src="{% static 'images/main-slider/author-4.png' %}" alt="" /></li>
+						</ul>
+						<div class="testimonial-two_reviews">
+							Our Clients <br> (5K+ Reviews)
+						</div>
+					</div>
+					<h4 class="testimonial-two_title">Meaningful partnerships that drive measurable growth</h4>
+					<!-- Button Box -->
+					<div class="testimonial-two_title-button">
+						<a href="testimonial.html" class="theme-btn btn-style-one">
+							<span class="btn-wrap">
+								<span class="text-one">View All</span>
+								<span class="text-two">View All</span>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Testimonial Two Carousel Column -->
+			<div class="testimonial-two_carousel-column col-lg-8 col-md-8 col-sm-12">
+				<div class="testimonial-two_carousel-outer" style="background-image:url({% static 'images/background/pattern-23.png' %})">
+					<div class="testimonial-two_carousel swiper-container">
+						<div class="swiper-wrapper">
+
+							<!-- Slide -->
+							<div class="swiper-slide">
+								<!-- Testimonial Block Two -->
+								<div class="testimonial-block_two">
+									<div class="testimonial-block_two-inner">
+										<div class="testimonial-block_two-text">“ Partnering with Compassionate Care Advisors has transformed our clinic’s workflow. Their EMR system is secure, fast, and incredibly intuitive — saving us hours each week. ”</div>
+										<div class="testimonial-block_two-author">
+											<div class="testimonial-block_two-author_image">
+												<img src="{% static 'images/resource/author-2.jpg' %}" alt="" />
+											</div>
+											Dr. Emily Watson
+											<span>Founder, Horizon Family Clinic</span>
+										</div>
+										<div class="testimonial-block_two-rating">
+											5.0 &nbsp;
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Slide -->
+							<div class="swiper-slide">
+								<!-- Testimonial Block Two -->
+								<div class="testimonial-block_two alternate">
+									<div class="testimonial-block_two-inner">
+										<div class="testimonial-block_two-text">“ Their team helped us build a strong online presence. From SEO to patient engagement campaigns, every strategy was data-driven and delivered measurable results. ”</div>
+										<div class="testimonial-block_two-author">
+											<div class="testimonial-block_two-author_image">
+												<img src="{% static 'images/resource/author-3.jpg' %}" alt="" />
+											</div>
+											Michael Johnson
+											<span>Marketing Director, Wellness Alliance</span>
+										</div>
+										<div class="testimonial-block_two-rating">
+											5.0 &nbsp;
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Slide -->
+							<div class="swiper-slide">
+								<!-- Testimonial Block Two -->
+								<div class="testimonial-block_two">
+									<div class="testimonial-block_two-inner">
+										<div class="testimonial-block_two-text">“ Our patient communication improved dramatically thanks to their automation tools. We’re now engaging patients efficiently without compromising care quality. ”</div>
+										<div class="testimonial-block_two-author">
+											<div class="testimonial-block_two-author_image">
+												<img src="{% static 'images/resource/author-4.jpg' %}" alt="" />
+											</div>
+											Sarah Patel
+											<span>Operations Manager, Mindful Health Center</span>
+										</div>
+										<div class="testimonial-block_two-rating">
+											5.0 &nbsp;
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Slide -->
+							<div class="swiper-slide">
+								<!-- Testimonial Block Two -->
+								<div class="testimonial-block_two alternate">
+									<div class="testimonial-block_two-inner">
+										<div class="testimonial-block_two-text">“ From our first consultation to ongoing support, the Compassionate Care team has been proactive, transparent, and deeply committed to our success. ”</div>
+										<div class="testimonial-block_two-author">
+											<div class="testimonial-block_two-author_image">
+												<img src="{% static 'images/resource/author-1.jpg' %}" alt="" />
+											</div>
+											James Rodriguez
+											<span>CEO, Harmony Medical Group</span>
+										</div>
+										<div class="testimonial-block_two-rating">
+											5.0 &nbsp;
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						
+						<!-- Slider One Arrows -->
+						<div class="testimonial-two_arrow">
+							<!-- If we need navigation buttons -->
+							<div class="testimonial-two_carousel-prev fas fa-arrow-left fa-fw"></div>
+							<div class="testimonial-two_carousel-next fas fa-arrow-right fa-fw"></div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</section>
+<!-- End Testimonial Two -->
+
+    
+{% endblock body %}
+
+
+{% block js %}
+    
+{% endblock js %}

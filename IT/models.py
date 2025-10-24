@@ -277,3 +277,7 @@ class CaseStudy(models.Model):
     def get_absolute_url(self):
         from django.urls import reverse
         return reverse('case_study_detail', kwargs={'slug': self.slug})
+    
+
+
+    

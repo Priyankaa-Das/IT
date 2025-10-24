@@ -126,3 +126,6 @@ def case_study_detail(request, slug):
 
 def faq(request):
 	return render(request, 'faqs.html')
+
+def testimonials(request):
+	return render(request, 'testimonials.html')
