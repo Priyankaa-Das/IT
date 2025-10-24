@@ -23,7 +23,7 @@
 								<div class="slider-one_title">Elevate your medical practice</div>
 								<h1 class="slider-one_heading">HIPAA-compliant <span>EMR</span> built for patient-first care</h1>
 								<div class="slider-one_button d-flex align-items-center flex-wrap">
-									<a href="contact.html" class="theme-btn btn-style-two">
+									<a href="{% url 'contact' %}" class="theme-btn btn-style-two">
 										<span class="btn-wrap">
 											<span class="text-one">Book a Consultation</span>
 											<span class="text-two">Book a Consultation</span>
@@ -50,7 +50,7 @@
 								<div class="slider-one_title">Grow patient acquisition</div>
 								<h1 class="slider-one_heading">Data-driven <span>marketing</span> for healthcare practices</h1>
 								<div class="slider-one_button d-flex align-items-center flex-wrap">
-									<a href="services.html" class="theme-btn btn-style-two">
+									<a href="{% url 'service_list' %}" class="theme-btn btn-style-two">
 										<span class="btn-wrap">
 											<span class="text-one">See Our Services</span>
 											<span class="text-two">See Our Services</span>
@@ -109,7 +109,7 @@
 		<!-- Slider One Options -->
 		<div class="slider-one_options">
 			<div class="button">
-				<a class="service-btn" href="services.html">More Services <i class="fa-arrow-right"></i></a>
+				<a class="service-btn" href="{% url 'service_list' %}">More Services <i class="fa-arrow-right"></i></a>
 			</div>
 			<div class="slider-one_authors">
 				<ul>
@@ -465,7 +465,7 @@
 			<!-- Process One Content -->
 			<div class="process-one_content">
 				<div class="process-one_button">
-					<a href="contact.html" class="theme-btn btn-style-three">
+					<a href="{% url 'contact' %}" class="theme-btn btn-style-three">
 						<span class="btn-wrap">
 							<span class="text-one">Get Started</span>
 							<span class="text-two">Get Started</span>
@@ -647,7 +647,7 @@
 					<div class="testimonial-one_talk d-flex"><span class="up-down_animation">Lets Talk</span> <i><img src="{% static 'images/icons/hand-shake.png' %}" alt="" /></i></div>
 					<!-- Button Box -->
 					<div class="testimonial-one_button d-flex justify-content-end">
-						<a href="contact.html" class="theme-btn btn-style-three">
+						<a href="{% url 'contact' %}" class="theme-btn btn-style-three">
 							<span class="btn-wrap">
 								<span class="text-one">Contact Us</span>
 								<span class="text-two">Contact Us</span>
@@ -918,7 +918,7 @@
 						</div>
 						<!-- Button Box -->
 						<div class="team-one_info-button">
-							<a href="contact.html" class="theme-btn btn-style-one">
+							<a href="{% url 'contact' %}" class="theme-btn btn-style-one">
 								<span class="btn-wrap">
 									<span class="text-one">Contact Now</span>
 									<span class="text-two">Contact Now</span>
@@ -990,7 +990,7 @@
 						</div>
 						<!-- Button Box -->
 						<div class="experiance-one_button">
-							<a href="contact.html" class="theme-btn btn-style-one">
+							<a href="{% url 'contact' %}" class="theme-btn btn-style-one">
 								<span class="btn-wrap">
 									<span class="text-one">Get Started</span>
 									<span class="text-two">Get Started</span>
