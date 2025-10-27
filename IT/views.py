@@ -184,3 +184,10 @@ def contact_view(request):
 
 def contact_success_view(request):
     return render(request, 'contact/contact_success.html')
+
+
+def privacy_policy(request):
+    return render(request, 'privacy_policy.html')
+
+def terms_of_service(request):  
+    return render(request, 'terms_of_service.html')
