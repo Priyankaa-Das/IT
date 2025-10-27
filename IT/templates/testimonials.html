@@ -47,7 +47,7 @@
 						<div class="testimonial-one_talk d-flex align-items-center"><span class="up-down_animation">Let’s Talk</span> <i><img src="{% static 'images/icons/hand-shake.png' %}" alt="" /></i></div>
 						<!-- Button Box -->
 						<div class="testimonial-two_button d-flex justify-content-end">
-							<a href="contact.html" class="theme-btn btn-style-three">
+							<a href="{% url 'contact' %}" class="theme-btn btn-style-three">
 								<span class="btn-wrap">
 									<span class="text-one">Contact Us</span>
 									<span class="text-two">Contact Us</span>
@@ -80,7 +80,7 @@
 					<h4 class="testimonial-two_title">Meaningful partnerships that drive measurable growth</h4>
 					<!-- Button Box -->
 					<div class="testimonial-two_title-button">
-						<a href="testimonial.html" class="theme-btn btn-style-one">
+						<a href="{% url 'service_list' %}" class="theme-btn btn-style-one">
 							<span class="btn-wrap">
 								<span class="text-one">View All</span>
 								<span class="text-two">View All</span>

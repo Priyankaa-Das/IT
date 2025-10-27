@@ -13,11 +13,25 @@ from .forms import ContactForm
 
 
 def index(request):
-	return render(request, 'index.html')
+    teams = Team.objects.all()
+    data = Blog.objects.all().order_by('-id')
+
+    context = {
+        'data':data,
+        'teams': teams,
+    }
+    return render(request, 'index.html', context)
 
 
 def about(request):
-	return render(request, 'about.html')
+    teams = Team.objects.all()
+    
+
+    context = {
+        
+        'teams': teams,
+    }
+    return render(request, 'about.html', context)
 
 
 

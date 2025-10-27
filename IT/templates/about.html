@@ -106,7 +106,7 @@
 					
 					<!-- Button Box -->
 					<div class="about-two_button">
-						<a href="about.html" class="theme-btn btn-style-three">
+						<a href="{% url 'about' %}" class="theme-btn btn-style-three">
 							<span class="btn-wrap">
 								<span class="text-one">About More</span>
 								<span class="text-two">About More</span>
@@ -274,7 +274,7 @@
 		<div class="process-one_content">
 			<!-- Button Box -->
 			<div class="process-one_button">
-				<a href="about.html" class="theme-btn btn-style-three">
+				<a href="{% url 'about' %}" class="theme-btn btn-style-three">
 					<span class="btn-wrap">
 						<span class="text-one">Get Started</span>
 						<span class="text-two">Get Started</span>
@@ -389,7 +389,7 @@
 		
 		<!-- Button Box -->
 		<div class="step-two_button text-center">
-			<a href="about.html" class="theme-btn btn-style-two">
+			<a href="{% url 'about' %}" class="theme-btn btn-style-two">
 				<span class="btn-wrap">
 					<span class="text-one">Discover More</span>
 					<span class="text-two">Discover More</span>
@@ -425,7 +425,7 @@
                     <div class="testimonial-one_talk d-flex"><span class="up-down_animation">Let’s Talk</span> <i><img src="{% static 'images/icons/hand-shake.png' %}" alt="" /></i></div>
                     <!-- Button Box -->
                     <div class="testimonial-one_button d-flex justify-content-end">
-                        <a href="contact.html" class="theme-btn btn-style-three">
+                        <a href="{% url 'contact' %}" class="theme-btn btn-style-three">
                             <span class="btn-wrap">
                                 <span class="text-one">Contact Us</span>
                                 <span class="text-two">Contact Us</span>
@@ -559,133 +559,49 @@
 			</div>
 			
 			<div class="row g-0 clearfix">
-			
-				<!-- Team Block One -->
-				<div class="team-one_one">
-				  <div class="inner-box">
-					<div class="image-box">
-					  <figure class="image"><a href="team-detail.html"><img src="{% static 'images/resource/team-1.jpg' %}" alt=""></a></figure>
-					</div>
-					<div class="content-box">
-						<div class="d-flex justify-content-between">
-							<div class="left-box">
-								<span class="cat">CEO Founder</span>
-								<h5 class="title"><a href="team-detail.html">Kathy Elizabet</a></h5>
-							</div>
-							<div class="right-box">
-								<div class="team-one_socials">
-									<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-									<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-									<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-									<a href="https://dribbble.com/"><i class="fa-brands fa-dribbble"></i></a>
-								</div>
+		
+			{% for member in teams %}
+			<!-- Team Block One -->
+			<div class="team-one_one">
+			  <div class="inner-box">
+				<div class="image-box">
+				  <figure class="image"><a href="{% url 'team_detail' member.slug %}">
+					{% if member.image %}
+					<img src="{{ member.image.url }}" alt="{{ member.name }}">
+					{% else %}
+					<img src="assets/images/resource/team-{{ forloop.counter }}.jpg" alt="{{ member.name }}">
+					{% endif %}
+				  </a></figure>
+				</div>
+				<div class="content-box">
+					<div class="d-flex justify-content-between">
+						<div class="left-box">
+							<span class="cat">{{ member.position }}</span>
+							<h5 class="title"><a href="{% url 'team_detail' member.slug %}">{{ member.name }}</a></h5>
+						</div>
+						<div class="right-box">
+							<div class="team-one_socials">
+								{% if member.facebook %}
+								<a href="{{ member.facebook }}"><i class="fa-brands fa-facebook-f"></i></a>
+								{% endif %}
+								{% if member.instagram %}
+								<a href="{{ member.instagram }}"><i class="fa-brands fa-instagram"></i></a>
+								{% endif %}
+								{% if member.twitter %}
+								<a href="{{ member.twitter }}"><i class="fa-brands fa-twitter"></i></a>
+								{% endif %}
+								{% if member.linkedin %}
+								<a href="{{ member.linkedin }}"><i class="fa-brands fa-dribbble"></i></a>
+								{% endif %}
 							</div>
 						</div>
 					</div>
-				  </div>
 				</div>
-				
-				<!-- Team Block One -->
-				<div class="team-one_one">
-				  <div class="inner-box">
-					<div class="image-box">
-					  <figure class="image"><a href="team-detail.html"><img src="{% static 'images/resource/team-2.png' %}" alt=""></a></figure>
-					</div>
-					<div class="content-box">
-						<div class="d-flex justify-content-between">
-							<div class="left-box">
-								<span class="cat">CEO Founder</span>
-								<h5 class="title"><a href="team-detail.html">Kathy Elizabet</a></h5>
-							</div>
-							<div class="right-box">
-								<div class="team-one_socials">
-									<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-									<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-									<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-									<a href="https://dribbble.com/"><i class="fa-brands fa-dribbble"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				  </div>
-				</div>
-				
-				<!-- Team Block One -->
-				<div class="team-one_one">
-				  <div class="inner-box">
-					<div class="image-box">
-					  <figure class="image"><a href="team-detail.html"><img src="{% static 'images/resource/team-3.png' %}" alt=""></a></figure>
-					</div>
-					<div class="content-box">
-						<div class="d-flex justify-content-between">
-							<div class="left-box">
-								<span class="cat">CEO Founder</span>
-								<h5 class="title"><a href="team-detail.html">Kathy Elizabet</a></h5>
-							</div>
-							<div class="right-box">
-								<div class="team-one_socials">
-									<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-									<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-									<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-									<a href="https://dribbble.com/"><i class="fa-brands fa-dribbble"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				  </div>
-				</div>
-				
-				<!-- Team Block One -->
-				<div class="team-one_one">
-				  <div class="inner-box">
-					<div class="image-box">
-					  <figure class="image"><a href="team-detail.html"><img src="{% static 'images/resource/team-4.png' %}" alt=""></a></figure>
-					</div>
-					<div class="content-box">
-						<div class="d-flex justify-content-between">
-							<div class="left-box">
-								<span class="cat">CEO Founder</span>
-								<h5 class="title"><a href="team-detail.html">Kathy Elizabet</a></h5>
-							</div>
-							<div class="right-box">
-								<div class="team-one_socials">
-									<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-									<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-									<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-									<a href="https://dribbble.com/"><i class="fa-brands fa-dribbble"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				  </div>
-				</div>
-				
-				<!-- Team Block One -->
-				<div class="team-one_one">
-				  <div class="inner-box">
-					<div class="image-box">
-					  <figure class="image"><a href="team-detail.html"><img src="{% static 'images/resource/team-5.png' %}" alt=""></a></figure>
-					</div>
-					<div class="content-box">
-						<div class="d-flex justify-content-between">
-							<div class="left-box">
-								<span class="cat">CEO Founder</span>
-								<h5 class="title"><a href="team-detail.html">Kathy Elizabet</a></h5>
-							</div>
-							<div class="right-box">
-								<div class="team-one_socials">
-									<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-									<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-									<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-									<a href="https://dribbble.com/"><i class="fa-brands fa-dribbble"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				  </div>
-				</div>
-				
+			  </div>
 			</div>
+			{% endfor %}
+			
+		</div>
 			
 			<div class="text-center">
 				<div class="team-one_info">
@@ -693,7 +609,7 @@
 						<div class="team-one_info-text">A clear,concise headline that captures attention and communicates your value proposition </div>
 						<!-- Button Box -->
 						<div class="team-one_info-button">
-							<a href="contact.html" class="theme-btn btn-style-one">
+							<a href="{% url 'contact' %}" class="theme-btn btn-style-one">
 								<span class="btn-wrap">
 									<span class="text-one">Contact Now</span>
 									<span class="text-two">Contact Now</span>
@@ -757,7 +673,7 @@
 				<div class="experiance-one_text">With 15+ years in healthcare consulting, we help practices grow, engage patients, and achieve results.</div>
 				<!-- Button Box -->
 				<div class="experiance-one_button">
-					<a href="about.html" class="theme-btn btn-style-one">
+					<a href="{% url 'about' %}" class="theme-btn btn-style-one">
 						<span class="btn-wrap">
 							<span class="text-one">Get Started</span>
 							<span class="text-two">Get Started</span>
@@ -773,102 +689,80 @@
 	<!-- End Marketing One -->
 	
 	<!-- Clients One -->
-	<section class="clients-two style-two">
-	<div class="auto-container">
-		<!-- Sec Title -->
-		<div class="sec-title centered">
-			<div class="sec-title_title">
-				<div class="sec-title_dots">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-				Trusted by healthcare providers and organizations worldwide
-				<div class="sec-title_dots">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</div>
-			<h2 class="sec-title_heading">Proud to partner with <br> leading healthcare brands</h2>
-		</div>
-		
-		<div class="inner-container clearfix">
-			
-			<!-- Column -->
-			<div class="column">
-				<div class="client-image">
-					<a href="#"><img src="{% static 'images/clients/7.png' %}" alt="Client Logo" /></a>
-				</div>
-			</div>
-			
-			<!-- Column -->
-			<div class="column">
-				<div class="client-image">
-					<a href="#"><img src="{% static 'images/clients/8.png' %}" alt="Client Logo" /></a>
-				</div>
-			</div>
-			
-			<!-- Column -->
-			<div class="column">
-				<div class="client-image">
-					<a href="#"><img src="{% static 'images/clients/9.png' %}" alt="Client Logo" /></a>
-				</div>
-			</div>
-			
-			<!-- Column -->
-			<div class="column">
-				<div class="client-image">
-					<a href="#"><img src="{% static 'images/clients/10.png' %}" alt="Client Logo" /></a>
-				</div>
-			</div>
-			
-			<!-- Column -->
-			<div class="column">
-				<div class="client-image">
-					<a href="#"><img src="{% static 'images/clients/11.png' %}" alt="Client Logo" /></a>
-				</div>
-			</div>
-			
-			<!-- Column -->
-			<div class="column">
-				<div class="client-image">
-					<a href="#"><img src="{% static 'images/clients/12.png' %}" alt="Client Logo" /></a>
-				</div>
-			</div>
-			
-			<!-- Column -->
-			<div class="column">
-				<div class="client-image">
-					<a href="#"><img src="{% static 'images/clients/13.png' %}" alt="Client Logo" /></a>
-				</div>
-			</div>
-			
-			<!-- Column -->
-			<div class="column">
-				<div class="client-image">
-					<a href="#"><img src="{% static 'images/clients/14.png' %}" alt="Client Logo" /></a>
-				</div>
-			</div>
-			
-			<!-- Column -->
-			<div class="column">
-				<div class="client-image">
-					<a href="#"><img src="{% static 'images/clients/15.png' %}" alt="Client Logo" /></a>
-				</div>
-			</div>
-			
-			<!-- Column -->
-			<div class="column">
-				<div class="client-image">
-					<a href="#"><img src="{% static 'images/clients/16.png' %}" alt="Client Logo" /></a>
-                    </div>
-                </div>
-                
-            </div>
+		<section class="clients-one">
+		<div class="auto-container">
+			<div class="inner-container">
+				<div class="row clearfix">
+					<!-- Column -->
+					<div class="column col-lg-3 col-md-12 col-sm-12">
+						<div class="clients-one_title">Worked with world famous <br> brands and partners</div>
+					</div>
+					<!-- Column -->
+					<div class="column col-lg-9 col-md-12 col-sm-12">
+						<div class="clients-one_slider swiper-container">
+							<div class="swiper-wrapper">
+								
+								<!-- Slide -->
+								<div class="swiper-slide">
+									<div class="client-image">
+										<a href="#"><img src="{% static 'clients/1.png' %}" alt="" /></a>
+									</div>
+								</div>
 
-        </div>
-    </section>
+								<!-- Slide -->
+								<div class="swiper-slide">
+									<div class="client-image">
+										<a href="#"><img src="{% static 'clients/2.png' %}" alt="" /></a>
+									</div>
+								</div>
+
+								
+
+								<!-- Slide -->
+								<div class="swiper-slide">
+									<div class="client-image">
+										<a href="#"><img src="{% static 'clients/4.png' %}" alt="" /></a>
+									</div>
+								</div>
+
+								<!-- Slide -->
+								<div class="swiper-slide">
+									<div class="client-image">
+										<a href="#"><img src="{% static 'clients/6.png' %}" alt="" /></a>
+									</div>
+								</div>
+
+								<!-- Slide -->
+								<div class="swiper-slide">
+									<div class="client-image">
+										<a href="#"><img src="{% static 'clients/7.png' %}" alt="" /></a>
+									</div>
+								</div>
+
+								<!-- Slide -->
+								<div class="swiper-slide">
+									<div class="client-image">
+										<a href="#"><img src="{% static 'clients/8.png' %}" alt="" /></a>
+									</div>
+								</div>
+
+								<!-- Slide -->
+								<div class="swiper-slide">
+									<div class="client-image">
+										<a href="#"><img src="{% static 'clients/3.png' %}" alt="" /></a>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<br> <br>
 
 	<!-- End Clients Two -->
 {% endblock body %}

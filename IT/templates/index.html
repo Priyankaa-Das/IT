@@ -782,133 +782,49 @@
 			</div>
 			
 			<div class="row g-0 clearfix">
-			
-				<!-- Raymond Correa -->
-				<div class="team-one_one">
-				<div class="inner-box">
-					<div class="image-box">
-					<figure class="image"><a href="team-detail.html"><img src="{% static '1.png' %}" alt=""></a></figure>
-					</div>
-					<div class="content-box">
-						<div class="d-flex justify-content-between">
-							<div class="left-box">
-								<span class="cat">Chief Executive Officer</span>
-								<h5 class="title"><a href="team-detail.html">Raymond Correa</a></h5>
-							</div>
-							<div class="right-box">
-								<div class="team-one_socials">
-									<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-									<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-									<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-									<a href="https://linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
-								</div>
+		
+			{% for member in teams %}
+			<!-- Team Block One -->
+			<div class="team-one_one">
+			  <div class="inner-box">
+				<div class="image-box">
+				  <figure class="image"><a href="{% url 'team_detail' member.slug %}">
+					{% if member.image %}
+					<img src="{{ member.image.url }}" alt="{{ member.name }}">
+					{% else %}
+					<img src="assets/images/resource/team-{{ forloop.counter }}.jpg" alt="{{ member.name }}">
+					{% endif %}
+				  </a></figure>
+				</div>
+				<div class="content-box">
+					<div class="d-flex justify-content-between">
+						<div class="left-box">
+							<span class="cat">{{ member.position }}</span>
+							<h5 class="title"><a href="{% url 'team_detail' member.slug %}">{{ member.name }}</a></h5>
+						</div>
+						<div class="right-box">
+							<div class="team-one_socials">
+								{% if member.facebook %}
+								<a href="{{ member.facebook }}"><i class="fa-brands fa-facebook-f"></i></a>
+								{% endif %}
+								{% if member.instagram %}
+								<a href="{{ member.instagram }}"><i class="fa-brands fa-instagram"></i></a>
+								{% endif %}
+								{% if member.twitter %}
+								<a href="{{ member.twitter }}"><i class="fa-brands fa-twitter"></i></a>
+								{% endif %}
+								{% if member.linkedin %}
+								<a href="{{ member.linkedin }}"><i class="fa-brands fa-dribbble"></i></a>
+								{% endif %}
 							</div>
 						</div>
 					</div>
 				</div>
-				</div>
-				
-				<!-- Tina Correa -->
-				<div class="team-one_one">
-				<div class="inner-box">
-					<div class="image-box">
-					<figure class="image"><a href="team-detail.html"><img src="{% static '2.png' %}" alt=""></a></figure>
-					</div>
-					<div class="content-box">
-						<div class="d-flex justify-content-between">
-							<div class="left-box">
-								<span class="cat">Managing Partner</span>
-								<h5 class="title"><a href="team-detail.html">Tina Correa</a></h5>
-							</div>
-							<div class="right-box">
-								<div class="team-one_socials">
-									<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-									<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-									<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-									<a href="https://linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				</div>
-				
-				<!-- Dr. Richard Koffler -->
-				<div class="team-one_one">
-				<div class="inner-box">
-					<div class="image-box">
-					<figure class="image"><a href="team-detail.html"><img src="{% static '3.png' %}" alt=""></a></figure>
-					</div>
-					<div class="content-box">
-						<div class="d-flex justify-content-between">
-							<div class="left-box">
-								<span class="cat">Chief Medical Officer</span>
-								<h5 class="title"><a href="team-detail.html">Dr. Richard Koffler, MD</a></h5>
-							</div>
-							<div class="right-box">
-								<div class="team-one_socials">
-									<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-									<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-									<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-									<a href="https://linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				</div>
-				
-				<!-- Vedha Siva M -->
-				<div class="team-one_one">
-				<div class="inner-box">
-					<div class="image-box">
-					<figure class="image"><a href="team-detail.html"><img src="{% static '4.png' %}" alt=""></a></figure>
-					</div>
-					<div class="content-box">
-						<div class="d-flex justify-content-between">
-							<div class="left-box">
-								<span class="cat">Lead Developer</span>
-								<h5 class="title"><a href="team-detail.html">Vedha Siva M</a></h5>
-							</div>
-							<div class="right-box">
-								<div class="team-one_socials">
-									<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-									<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-									<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-									<a href="https://linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				</div>
-				
-				<!-- Dilabar Hussain -->
-				<div class="team-one_one">
-				<div class="inner-box">
-					<div class="image-box">
-					<figure class="image"><a href="team-detail.html"><img src="{% static '5.png' %}" alt=""></a></figure>
-					</div>
-					<div class="content-box">
-						<div class="d-flex justify-content-between">
-							<div class="left-box">
-								<span class="cat">Lead AI Engineer</span>
-								<h5 class="title"><a href="team-detail.html">Dilabar Hussain</a></h5>
-							</div>
-							<div class="right-box">
-								<div class="team-one_socials">
-									<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-									<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-									<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-									<a href="https://linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				</div>
-				
+			  </div>
 			</div>
+			{% endfor %}
+			
+		</div>
 			
 			<div class="text-center">
 				<div class="team-one_info">
@@ -1023,7 +939,7 @@
 				<div class="right-box title-anim">
 					<!-- Button Box -->
 					<div class="news-one_button">
-						<a href="blog.html" class="theme-btn btn-style-three">
+						<a href="{% url 'blog' %}" class="theme-btn btn-style-three">
 							<span class="btn-wrap">
 								<span class="text-one">View All Posts</span>
 								<span class="text-two">View All Posts</span>
@@ -1033,86 +949,50 @@
 				</div>
 			</div>
 			<div class="row clearfix">
-				
-				<!-- News Block -->
-				<div class="news-block_one col-lg-4 col-md-6 col-sm-12">
-					<div class="news-block_one-inner">
-						<!-- Post Date -->
-						<div class="news-block_one-date_outer">
-							<div class="news-block_one-date">28/<span>06/2025</span></div>
-						</div>
-						<div class="news-block_one-image">
-							<a href="blog-detail.html"><img src="{% static 'images/resource/news-1.jpg' %}" alt="" /></a>
-							<img src="{% static 'images/resource/news-1.jpg' %}" alt="" />
-						</div>
-						<div class="d-flex justify-content-between align-items-center flex-wrap">
-							<ul class="news-block_one-meta">
-								<li><span class="icon fa-regular fa-comments fa-fw"></span>03</li>
-								<li><span class="icon fa-regular fa-user fa-fw"></span>Admin</li>
-							</ul>
-							<a class="news-block_one-arrow" href="blog-detail.html">
-								<img src="{% static 'images/icons/blog-arrow.svg' %}" alt="" />
-							</a>
-						</div>
-						<div class="news-block_one-content">
-							<h3 class="news-block_one-title"><a href="blog-detail.html">HIPAA-Compliant EMR: What Practices Should Know in 2025</a></h3>
-						</div>
+			
+			{% for blog in data %}
+			<!-- News Block -->
+			<div class="news-block_one col-lg-4 col-md-6 col-sm-12">
+				<div class="news-block_one-inner">
+					<!-- Post Date -->
+					<div class="news-block_one-date_outer">
+						<div class="news-block_one-date">{{ blog.published|date:"d" }}/<span>{{ blog.published|date:"m/Y" }}</span></div>
+					</div>
+					<div class="news-block_one-image">
+						<a href="{% url 'blog_detail' blog.slug %}">
+							{% if blog.banner_image %}
+							<img src="{{ blog.banner_image.url }}" alt="{{ blog.h1 }}" />
+							{% elif blog.image %}
+							<img src="{{ blog.image.url }}" alt="{{ blog.h1 }}" />
+							{% else %}
+							<img src="assets/images/resource/news-{{ forloop.counter|add:0|divisibleby:3|yesno:"3,"|default:"" }}{{ forloop.counter|add:0|divisibleby:3|yesno:",1"|add:forloop.counter|add:0|divisibleby:2|yesno:"2,1" }}.jpg" alt="{{ blog.h1 }}" />
+							{% endif %}
+						</a>
+						{% if blog.banner_image %}
+						<img src="{{ blog.banner_image.url }}" alt="{{ blog.h1 }}" />
+						{% elif blog.image %}
+						<img src="{{ blog.image.url }}" alt="{{ blog.h1 }}" />
+						{% else %}
+						<img src="assets/images/resource/news-{{ forloop.counter|add:0|divisibleby:3|yesno:"3,"|default:"" }}{{ forloop.counter|add:0|divisibleby:3|yesno:",1"|add:forloop.counter|add:0|divisibleby:2|yesno:"2,1" }}.jpg" alt="{{ blog.h1 }}" />
+						{% endif %}
+					</div>
+					<div class="d-flex justify-content-between align-items-center flex-wrap">
+						<ul class="news-block_one-meta">
+							<li><span class="icon fa-regular fa-comments fa-fw"></span>03</li>
+							<li><span class="icon fa-solid fa-user fa-fw"></span>Admin</li>
+						</ul>
+						<a class="news-block_one-arrow" href="{% url 'blog_detail' blog.slug %}">
+							<img src="assets/images/icons/blog-arrow.svg" alt="" />
+						</a>
+					</div>
+					<div class="news-block_one-content">
+						<h3 class="news-block_one-title"><a href="{% url 'blog_detail' blog.slug %}">{{ blog.h1 }}</a></h3>
 					</div>
 				</div>
-				
-				<!-- News Block -->
-				<div class="news-block_one col-lg-4 col-md-6 col-sm-12">
-					<div class="news-block_one-inner">
-						<!-- Post Date -->
-						<div class="news-block_one-date_outer">
-							<div class="news-block_one-date">22/<span>04/2025</span></div>
-						</div>
-						<div class="news-block_one-image">
-							<a href="blog-detail.html"><img src="{% static 'images/resource/news-2.jpg' %}" alt="" /></a>
-							<img src="{% static 'images/resource/news-2.jpg' %}" alt="" />
-						</div>
-						<div class="d-flex justify-content-between align-items-center flex-wrap">
-							<ul class="news-block_one-meta">
-								<li><span class="icon fa-regular fa-comments fa-fw"></span>03</li>
-								<li><span class="icon fa-regular fa-user fa-fw"></span>Admin</li>
-							</ul>
-							<a class="news-block_one-arrow" href="blog-detail.html">
-								<img src="{% static 'images/icons/blog-arrow.svg' %}" alt="" />
-							</a>
-						</div>
-						<div class="news-block_one-content">
-							<h3 class="news-block_one-title"><a href="blog-detail.html">Healthcare SEO: 7 Quick Wins to Increase Patient Bookings</a></h3>
-						</div>
-					</div>
-				</div>
-				
-				<!-- News Block -->
-				<div class="news-block_one col-lg-4 col-md-6 col-sm-12">
-					<div class="news-block_one-inner">
-						<!-- Post Date -->
-						<div class="news-block_one-date_outer">
-							<div class="news-block_one-date">27/<span>05/2025</span></div>
-						</div>
-						<div class="news-block_one-image">
-							<a href="blog-detail.html"><img src="{% static 'images/resource/news-3.jpg' %}" alt="" /></a>
-							<img src="{% static 'images/resource/news-3.jpg' %}" alt="" />
-						</div>
-						<div class="d-flex justify-content-between align-items-center flex-wrap">
-							<ul class="news-block_one-meta">
-								<li><span class="icon fa-regular fa-comments fa-fw"></span>03</li>
-								<li><span class="icon fa-regular fa-user fa-fw"></span>Admin</li>
-							</ul>
-							<a class="news-block_one-arrow" href="blog-detail.html">
-								<img src="{% static 'images/icons/blog-arrow.svg' %}" alt="" />
-							</a>
-						</div>
-						<div class="news-block_one-content">
-							<h3 class="news-block_one-title"><a href="blog-detail.html">Reputation Playbook: Responding to Patient Reviews the Right Way</a></h3>
-						</div>
-					</div>
-				</div>
-				
 			</div>
+			{% endfor %}
+			
+		</div>
 		</div>
 	</section>
 

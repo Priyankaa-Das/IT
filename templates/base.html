@@ -129,50 +129,50 @@
                                                         <div class="column col-lg-3 col-md-12 col-sm-12">
                                                             <h6>Start Here</h6>
                                                             <ul>
-                                                                <li><a href="index.html">Homepage</a></li>
-                                                                <li><a href="about.html">Why Choose CCA</a></li>
-                                                                <li><a href="testimonial.html">Client Testimonials</a></li>
+                                                                <li><a href="{% url 'index' %}">Homepage</a></li>
+                                                                <li><a href="{% url 'about' %}">Why Choose CCA</a></li>
+                                                                <li><a href="{% url 'testimonials' %}">Client Testimonials</a></li>
                                                             </ul>
                                                             <h6>Quick Actions</h6>
                                                             <ul>
-                                                                <li><a href="contact.html">Book a Consultation</a></li>
-                                                                <li><a href="services.html">Explore Services</a></li>
-                                                                <li><a href="blog.html">Latest Insights</a></li>
+                                                                <li><a href="{% url 'contact' %}">Book a Consultation</a></li>
+                                                                <li><a href="{% url 'service_list' %}">Explore Services</a></li>
+                                                                <li><a href="{% url 'blog' %}">Latest Insights</a></li>
                                                             </ul>
                                                         </div>
                                                         <div class="column col-lg-3 col-md-12 col-sm-12">
                                                             <h6>About CCA</h6>
                                                             <ul>
-                                                                <li><a href="about.html">About Us</a></li>
-                                                                <li><a href="privacy.html">Privacy Policy</a></li>
-                                                                <li><a href="terms.html">Terms & Conditions</a></li>
+                                                                <li><a href="{% url 'about' %}">About Us</a></li>
+                                                                <li><a href="#">Privacy Policy</a></li>
+                                                                <li><a href="#">Terms & Conditions</a></li>
                                                             </ul>
                                                             <h6>Support</h6>
                                                             <ul>
-                                                                <li><a href="faq.html">FAQs</a></li>
-                                                                <li><a href="contact.html">Contact Us</a></li>
+                                                                <li><a href="{% url 'faq' %}">FAQs</a></li>
+                                                                <li><a href="{% url 'contact' %}">Contact Us</a></li>
                                                             </ul>
                                                         </div>
                                                         <div class="column col-lg-3 col-md-12 col-sm-12">
                                                             <h6>Showcase</h6>
                                                             <ul>
-                                                                <li><a href="gallery.html">Gallery</a></li>
-                                                                <li><a href="project.html">Case Studies</a></li>
+                                                                <li><a href="#">Gallery</a></li>
+                                                                <li><a href="{% url 'case_study_list' %}">Case Studies</a></li>
                                                             </ul>
                                                             <h6>Resources</h6>
                                                             <ul>
-                                                                <li><a href="blog.html">Blogs</a></li>
-                                                                <li><a href="blog-classic.html">Guides</a></li>
+                                                                <li><a href="{% url 'blog' %}">Blogs</a></li>
+                                                                {% comment %} <li><a href="{% url 'blog_classic' %}">Guides</a></li> {% endcomment %}
                                                             </ul>
                                                         </div>
                                                         <div class="column col-lg-3 col-md-12 col-sm-12">
                                                             <h6>Get Started</h6>
                                                             <ul>
-                                                                <li><a href="services.html">All Services</a></li>
-                                                                <li><a href="service-detail.html#emr">EMR (HIPAA-Compliant)</a></li>
-                                                                <li><a href="service-detail.html#digital-presence">Digital Presence</a></li>
-                                                                <li><a href="service-detail.html#reputation">Reputation Management</a></li>
-                                                                <li><a href="service-detail.html#market-strategy">Market Analysis & Strategy</a></li>
+                                                                <li><a href="{% url 'service_list' %}">All Services</a></li>
+                                                                <li><a href="#">EMR (HIPAA-Compliant)</a></li>
+                                                                <li><a href="#`">Digital Presence</a></li>
+                                                                <li><a href="#">Reputation Management</a></li>
+                                                                <li><a href="#">Market Analysis & Strategy</a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -191,7 +191,7 @@
 
                                             <!-- SERVICES -->
                                             <li class="dropdown">
-                                                <a href="#">Services</a>
+                                                <a href="{% url 'service_list' %}">Services</a>
                                                 <ul>
                                                     {% for service in nav_services %}
                                                         <li>
@@ -212,7 +212,7 @@
                                             </li>
 
                                             <!-- GALLERY (repurposed from "shop") -->
-                                            <li class="dropdown"><a href="gallery.html">Gallery</a>
+                                            <li class="dropdown"><a href="#">Gallery</a>
                                                 <ul>
                                                     <li><a href="gallery.html">Before & After</a></li>
                                                     <li><a href="{% url 'case_study_list' %}">Case Studies</a></li>
@@ -238,7 +238,7 @@
                             <div class="outer-box d-flex align-items-center flex-wrap">
 
                                 <!-- Search Btn -->
-                                <div class="search-box-btn search-box-outer"><span class="icon fa fa-search"></span></div>
+                                {% comment %} <div class="search-box-btn search-box-outer"><span class="icon fa fa-search"></span></div> {% endcomment %}
 
                                 <!-- About Widget -->
                                 <span class="about-widget">
@@ -251,7 +251,7 @@
                                 
                                 <!-- Button Box -->
                                 <div class="main-header_button">
-                                    <a href="about.html" class="theme-btn btn-style-one">
+                                    <a href="{% url 'contact' %}" class="theme-btn btn-style-one">
                                         <span class="btn-wrap">
                                             <span class="text-one">Get Started</span>
                                             <span class="text-two">Get Started</span>
@@ -318,7 +318,7 @@
                 <p style=" font-size:15px; margin-bottom:15px;">
                     Schedule a free strategy call with our healthcare marketing experts and discover your next growth opportunity.
                 </p>
-                <a href="contact.html" class="theme-btn btn-style-one" style="display:inline-block;">
+                <a href="{% url 'contact' %}" class="theme-btn btn-style-one" style="display:inline-block;">
                     <span class="btn-wrap">
                         <span class="text-one">Book Your Free Consultation</span>
                         <span class="text-two">Book Now</span>

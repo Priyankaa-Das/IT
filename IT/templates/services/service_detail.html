@@ -51,10 +51,10 @@
 							<div class="rating-widget_rating">4.9</div>
 							<div class="rating-widget_authors">
 								<ul>
-									<li><img src="assets/images/main-slider/author-1.png" alt="" /></li>
-									<li><img src="assets/images/main-slider/author-2.png" alt="" /></li>
-									<li><img src="assets/images/main-slider/author-3.png" alt="" /></li>
-									<li><img src="assets/images/main-slider/author-4.png" alt="" /></li>
+									<li><img src="{% static 'images/main-slider/author-1.png' %}" alt="" /></li>
+									<li><img src="{% static 'images/main-slider/author-2.png' %}" alt="" /></li>
+									<li><img src="{% static 'images/main-slider/author-3.png' %}" alt="" /></li>
+									<li><img src="{% static 'images/main-slider/author-4.png' %}" alt="" /></li>
 								</ul>
 								<div class="rating-widget_reviews">
 									Our Client <br> (5k + Reviews)
@@ -63,7 +63,7 @@
 							<h4 class="rating-widget_title">Customer experiences that speak for themselves</h4>
 							<!-- Button Box -->
 							<div class="rating-widget_title-button">
-								<a href="testimonial.html" class="theme-btn btn-style-one">
+								<a href="{% url 'contact' %}" class="theme-btn btn-style-one">
 									<span class="btn-wrap">
 										<span class="text-one">Book Now</span>
 										<span class="text-two">Book Now</span>
@@ -172,7 +172,7 @@
 		<div class="process-one_content">
 			<!-- Button Box -->
 			<div class="process-one_button">
-				<a href="about.html" class="theme-btn btn-style-three">
+				<a href="{% url 'contact' %}" class="theme-btn btn-style-three">
 					<span class="btn-wrap">
 						<span class="text-one">Get Started</span>
 						<span class="text-two">Get Started</span>
@@ -199,7 +199,7 @@
 			</div>
 			<div class="cta-one_btn">
 				<div class="news-three_button">
-					<a href="contact.html" class="theme-btn btn-style-one">
+					<a href="{% url 'contact' %}" class="theme-btn btn-style-one">
 						<span class="btn-wrap">
 							<span class="text-one">get a Quote</span>
 							<span class="text-two">get a Quote</span>
